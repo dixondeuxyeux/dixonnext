@@ -2,7 +2,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import Head from 'next/head'
 import NextLink from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Carousel from '../components/Carousel'
 import Accordion from '../components/Accordion'
 
@@ -165,13 +165,13 @@ export default function Layout({ title, description, children }) {
               </IconButton>
               <NextLink href='/' passHref>
                 <Link className={classes.searchSection}>
-                  {/* <Typography>Dixon Print Shop</Typography> */}
-                  <Image
+                  <Typography>Dixon Print Shop</Typography>
+                  {/* <Image
                     src={require('../public/images/dixonlogo4J.svg')}
                     width={100}
                     height={30}
                     alt='logo'
-                  />
+                  /> */}
                 </Link>
               </NextLink>
               <NextLink href='/' passHref>

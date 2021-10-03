@@ -15,10 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-root: {
-  width: '80%',
-  '& .mui-expanded': {
-    transform: 'rotate(0deg)';
-    backgroundcolor: 'rgb(201, 106, 51)';
-  }
-}
+/* root: {
+  background-color: 'rgb(201, 106, 51)';
+} */
