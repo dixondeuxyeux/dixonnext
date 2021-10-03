@@ -21,6 +21,15 @@ const useStyles = makeStyles((theme) => ({
     padding: '0 10',
   },
 
+  h5: {
+    paddingLeft: '62px',
+    marginBottom: -6,
+    fontWeight: 500,
+    color: '#2197e6',
+    fontSize: '1.1rem',
+    opacity: 0.73,
+  },
+
   grow: {
     flexGrow: 1,
   },
