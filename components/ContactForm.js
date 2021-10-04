@@ -35,7 +35,7 @@ export default function ContactForm() {
           <div className={classes.button2}>
             <textarea
               type='text'
-              className='col-8 form-control'
+              className='col-8 pt-2 mx-auto form-control'
               cols='30'
               rows='2'
               placeholder='Name'
