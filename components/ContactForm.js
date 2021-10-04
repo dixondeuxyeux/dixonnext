@@ -1,5 +1,7 @@
 import emailjs from 'emailjs-com'
 import React from 'react'
+import { init } from 'emailjs-com'
+init('user_1053dH7HCzeuEXyun8RPD')
 
 export default function ContactForm() {
   function sendEmail(e) {
@@ -20,7 +22,7 @@ export default function ContactForm() {
           console.log(error.text)
         }
       )
-      e.target.reset()
+    e.target.reset()
   }
   return (
     <div>
