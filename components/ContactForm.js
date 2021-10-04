@@ -3,6 +3,7 @@ import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
 import useStyles from '../utils/styles'
+import Button from '@material-ui/core'
 
 export default function ContactForm() {
   const classes = useStyles()
@@ -26,6 +27,7 @@ export default function ContactForm() {
       )
     e.target.reset()
   }
+
   return (
     <div>
       <div className='container'>
@@ -39,7 +41,7 @@ export default function ContactForm() {
             />
           </div>
           <div className='col-8 form-group mx-auto'>
-            <input 
+            <input
               type='text'
               className='form-control'
               placeholder='Email Address'
@@ -64,13 +66,16 @@ export default function ContactForm() {
               name='message'
             ></textarea>
           </div>
-          <div className='col-8 form-group mx-auto'>
-            <input
+          
+            <Button
               type='submit'
-              className='btn btn-info'
+              color='secondary'
+              variant='contained'
               value='Send Message'
-            ></input>
-          </div>
+            >
+              Submit
+            </Button>
+          
         </form>
       </div>
     </div>
