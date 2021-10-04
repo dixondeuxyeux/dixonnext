@@ -49,12 +49,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 
-  center: {
-    maxWidth: '800px',
-    margin: '0 auto',
-    padding: '80px',
-  },
-
   lower: {
     marginTop: -30,
     paddingRight: 10,
@@ -63,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
   lower2: {
     paddingTop: 1,
     marginBottom: -6,
-    // paddingRight: 10,
-    // marginLeft: 10,
+    paddingRight: 10,
+    marginLeft: 10,
   },
 
   lower3: {
@@ -206,22 +200,21 @@ const useStyles = makeStyles((theme) => ({
       color: '#000000',
     },
   },
-  // button2: {
-  //   display: 'block',
-  //   maxWidth: '700',
-  //   fontSize: '1.3rem',
-  //   // color: '#1db6d8',
-  //   paddingTop: 5,
-  //   padding: '20 30',
-  //   borderRadius: '0 5px 5px 0',
-  //   '& span': {
-  //     color: '#000000',
-  //   },
-  // },
+  button2: {
+    display: 'block',
+    maxWidth: '700',
+    fontSize: '1.3rem',
+    // color: '#1db6d8',
+    paddingTop: 5,
+    padding: '20 30',
+    borderRadius: '0 5px 5px 0',
+    '& span': {
+      color: '#000000',
+    },
+  },
   container: {
-    maxWidth: '600',
-    margin: '0 300 0 300',
-    backgroundColor: '#27415a',
+    margin: '0 auto',
+    // backgroundColor: '#789dc0',
   },
 
   sort: {

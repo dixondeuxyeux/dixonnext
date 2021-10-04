@@ -29,38 +29,35 @@ export default function ContactForm() {
   }
 
   return (
-    <div>
-      <Container className={classes.container}>
+    <Container>
+      <br /> 
+      <h3>Please feel free to email me with any questions</h3>
+      <br />
+      <div className={classes.container}>
         <form className={classes.center} onSubmit={sendEmail}>
           <div className={classes.button2}>
-            <textarea
+            <input
               type='text'
-              className='col-8 pt-2 mx-auto form-control'
-              cols='30'
-              rows='2'
+              className='form-control'
               placeholder='Name'
               name='name'
-            ></textarea>
+            />
           </div>
           <div className={classes.button2}>
-            <textarea
+            <input
               type='text'
               className='form-control'
-              cols='30'
-              rows='2'
               placeholder='Email'
               name='email'
-            ></textarea>
+            />
           </div>
           <div className={classes.button2}>
-            <textarea
+            <input
               type='text'
               className='form-control'
-              cols='30'
-              rows='2'
               placeholder='Subject'
               name='subject'
-            ></textarea>
+            />
           </div>
           <div className={classes.button2}>
             <textarea
@@ -80,7 +77,7 @@ export default function ContactForm() {
             />
           </div>
         </form>
-      </Container>
-    </div>
+      </div>
+    </Container>
   )
 }

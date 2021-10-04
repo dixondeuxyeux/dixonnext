@@ -319,6 +319,7 @@ export default function Layout({ title, description, children }) {
           </Toolbar>
         </AppBar>{' '}
         <Container className={classes.lower2}>{children} </Container>
+        
         <Carousel />
         <Typography className={classes.lower}>
           {''} <br />
