@@ -9,8 +9,8 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        'service_c445ruj',
-        'template_58doq6z',
+        'service_iq950vn',
+        'template_19euhak',
         e.target,
         'user_1053dH7HCzeuEXyun8RPD'
       )
