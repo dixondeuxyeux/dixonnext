@@ -3,7 +3,7 @@ import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
 import useStyles from '../utils/styles'
-import Button from '@material-ui/core'
+import { Container } from '@material-ui/core'
 
 export default function ContactForm() {
   const classes = useStyles()
@@ -30,33 +30,39 @@ export default function ContactForm() {
 
   return (
     <div>
-      <div className='container'>
+      <Container className={classes.container}>
         <form className={classes.center} onSubmit={sendEmail}>
-          <div className='col-8 form-group mx-auto'>
-            <input
+          <div className={classes.button2}>
+            <textarea
               type='text'
               className='form-control'
+              cols='30'
+              rows='2'
               placeholder='Name'
               name='name'
-            />
+            ></textarea>
           </div>
-          <div className='col-8 form-group mx-auto'>
-            <input
+          <div className={classes.button2}>
+            <textarea
               type='text'
               className='form-control'
-              placeholder='Email Address'
+              cols='30'
+              rows='2'
+              placeholder='Email'
               name='email'
-            />
+            ></textarea>
           </div>
-          <div className='col-8 form-group mx-auto'>
-            <input
+          <div className={classes.button2}>
+            <textarea
               type='text'
               className='form-control'
+              cols='30'
+              rows='2'
               placeholder='Subject'
               name='subject'
-            />
+            ></textarea>
           </div>
-          <div className='col-8 form-group mx-auto'>
+          <div className={classes.button2}>
             <textarea
               className='form-control'
               id=''
@@ -66,18 +72,15 @@ export default function ContactForm() {
               name='message'
             ></textarea>
           </div>
-          
-            <Button
+          <div className={classes.button2}>
+            <input
               type='submit'
-              color='secondary'
-              variant='contained'
+              className='btn btn-info'
               value='Send Message'
-            >
-              Submit
-            </Button>
-          
+            />
+          </div>
         </form>
-      </div>
+      </Container>
     </div>
   )
 }

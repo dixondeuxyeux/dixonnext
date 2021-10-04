@@ -331,14 +331,14 @@ export default function Layout({ title, description, children }) {
           <Accordion />
           <ContactForm />
         </Typography>
-        <footer>
+        {/* <footer>
           <br />
           <Typography className={classes.lower3}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
             {''} <br />
           </Typography>
-        </footer>
+        </footer> */}
       </ThemeProvider>
     </div>
   )

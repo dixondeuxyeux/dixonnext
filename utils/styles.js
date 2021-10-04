@@ -53,8 +53,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '800px',
     margin: '0 auto',
     padding: '80px',
-
-    backgroundColor: '#eaf2f4',
   },
 
   lower: {
@@ -90,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   lower5: {
     display: 'flex',
     alignContent: 'center',
-    backgroundColor: '#e7f1f8',
+    // backgroundColor: '#e7f1f8',
     // borderBottom: '.5px solid #12738E',
     padding: '3px 3px 4px 2px',
     marginLeft: '62px',
@@ -208,6 +206,24 @@ const useStyles = makeStyles((theme) => ({
       color: '#000000',
     },
   },
+  // button2: {
+  //   display: 'block',
+  //   maxWidth: '700',
+  //   fontSize: '1.3rem',
+  //   // color: '#1db6d8',
+  //   paddingTop: 5,
+  //   padding: '20 30',
+  //   borderRadius: '0 5px 5px 0',
+  //   '& span': {
+  //     color: '#000000',
+  //   },
+  // },
+  container: {
+    maxWidth: '600',
+    margin: '0 300 0 300',
+    backgroundColor: '#27415a',
+  },
+
   sort: {
     marginRight: 5,
   },
