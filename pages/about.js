@@ -4,7 +4,7 @@ import Head from 'next/head'
 import NextLink from 'next/link'
 import Image from 'next/image'
 import Carousel from '../components/Carousel'
-import Accordion from '../components/Accordion'
+import Accordion2 from '../components/Accordion'
 
 import {
   AppBar,
@@ -327,10 +327,10 @@ export default function Layout({ title, description, children }) {
           </h5>
           <br />
           {''} <br />
-          <Accordion />
+          <Accordion2 />
         </Typography>
         <footer>
-        <br />
+          <br />
           <Typography className={classes.lower3}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
