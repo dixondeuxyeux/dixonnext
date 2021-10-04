@@ -49,7 +49,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 
-  
+  center: {
+    maxWidth: '800px',
+    margin: '0 auto',
+    padding: '80px',
+
+    backgroundColor: '#eaf2f4',
+  },
 
   lower: {
     marginTop: -30,
@@ -82,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   lower5: {
-  display: 'flex',
+    display: 'flex',
     alignContent: 'center',
     backgroundColor: '#e7f1f8',
     // borderBottom: '.5px solid #12738E',

@@ -2,8 +2,10 @@ import emailjs from 'emailjs-com'
 import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
+import useStyles from '../utils/styles'
 
 export default function ContactForm() {
+  const classes = useStyles()
   function sendEmail(e) {
     e.preventDefault()
 
@@ -27,7 +29,7 @@ export default function ContactForm() {
   return (
     <div>
       <div className='container'>
-        <form onSubmit={sendEmail}>
+        <form className={classes.center} onSubmit={sendEmail}>
           <div className='col-8 form-group mx-auto'>
             <input
               type='text'
@@ -37,7 +39,7 @@ export default function ContactForm() {
             />
           </div>
           <div className='col-8 form-group mx-auto'>
-            <input
+            <input 
               type='text'
               className='form-control'
               placeholder='Email Address'
