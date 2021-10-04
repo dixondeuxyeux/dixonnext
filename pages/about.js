@@ -330,16 +330,10 @@ export default function Layout({ title, description, children }) {
           <Accordion />
         </Typography>
         <footer>
+        <br />
           <Typography className={classes.lower3}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
-            The Dixon Print Shop offers exhibition quality digital prints for
-            collectors and art lovers alike.
-            {''} <br />
-            Please feel free to email me with any questions or ideas at{' '}
-            <a href='mailto:www.dixondeuxyeux@gmail.com'>
-              dixondeuxyeuxgmail.com
-            </a>
             {''} <br />
           </Typography>
         </footer>
