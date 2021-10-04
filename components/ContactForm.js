@@ -9,7 +9,7 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        'gmail',
+        'service_iq950vn',
         'template_19euhak',
         e.target,
         'user_1053dH7HCzeuEXyun8RPD'
