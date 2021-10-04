@@ -63,29 +63,34 @@ const useStyles = makeStyles((theme) => ({
 
   lower3: {
     textAlign: 'center',
-    paddingTop: 30,
+    paddingTop: 60,
     paddingBottom: 30,
     marginBottom: -6,
-    fontWeight: 300,
+    fontWeight: 500,
     fontSize: '1rem',
-    opacity: 0.73,
+    opacity: 0.63,
   },
 
   lower4: {
     paddingLeft: '62px',
     marginBottom: -6,
-    fontWeight: 300,
+    fontWeight: 500,
     fontSize: '1rem',
-    opacity: 0.73,
+    opacity: 0.63,
   },
 
   lower5: {
-    paddingLeft: '62px',
-    marginBottom: -6,
+  display: 'flex',
+    alignContent: 'center',
+    backgroundColor: '#e7f1f8',
+    // borderBottom: '.5px solid #12738E',
+    padding: '3px 3px 4px 2px',
+    marginLeft: '62px',
+    marginBottom: -1,
     fontWeight: 500,
-    color: '#2197e6',
+    color: '#133b55',
     fontSize: '1.1rem',
-    opacity: 0.73,
+    opacity: 0.83,
   },
 
   justify: {
@@ -167,13 +172,13 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid rgba(0,0,0,0.1)',
     borderradius: 4,
   },
-  
+
   // search
   searchSection: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-    }
+    },
   },
   searchForm: {
     border: '1px solid #ffffff',

@@ -75,7 +75,7 @@ export async function getServerSideProps() {
     .sort({
       rating: -1,
     })
-    .limit(6)
+    .limit(9)
   await db.disconnect()
   return {
     props: {

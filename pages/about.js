@@ -4,7 +4,7 @@ import Head from 'next/head'
 import NextLink from 'next/link'
 import Image from 'next/image'
 import Carousel from '../components/Carousel'
-import Accordion2 from '../components/Accordion'
+import Accordion from '../components/Accordion'
 
 import {
   AppBar,
@@ -327,7 +327,7 @@ export default function Layout({ title, description, children }) {
           </h5>
           <br />
           {''} <br />
-          <Accordion2 />
+          <Accordion />
         </Typography>
         <footer>
           <br />
