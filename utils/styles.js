@@ -49,6 +49,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 
+  
+
   lower: {
     marginTop: -30,
     paddingRight: 10,
