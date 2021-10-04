@@ -5,6 +5,7 @@ import NextLink from 'next/link'
 import Image from 'next/image'
 import Carousel from '../components/Carousel'
 import Accordion from '../components/Accordion'
+import ContactForm from '../components/ContactForm'
 
 import {
   AppBar,
@@ -328,6 +329,7 @@ export default function Layout({ title, description, children }) {
           <br />
           {''} <br />
           <Accordion />
+          <ContactForm />
         </Typography>
         <footer>
           <br />
