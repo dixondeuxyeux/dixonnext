@@ -233,7 +233,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sort: {
-    marginRight: 5,
+    marginRight: 8,
   },
   fullContainer: { height: '100vh' },
   mapInputBox: {
