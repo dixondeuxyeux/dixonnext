@@ -257,7 +257,7 @@ export default function Layout({ title, description, children }) {
                     ) : (
                       <ShoppingCartIcon
                         color='primary'
-                        style={{ fontSize: '24px', marginBottom: '-4px' }}
+                        style={{ fontSize: '24px', marginBottom: '-8px' }}
                       />
                     )}
                   </Typography>
