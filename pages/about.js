@@ -260,7 +260,7 @@ export default function Layout({ title, description, children }) {
                     ) : (
                       <ShoppingCartIcon
                         color='primary'
-                        className={classes.lower2}
+                        style={{ fontSize: '24px', marginBottom: '-4px' }}
                       />
                     )}
                   </Typography>
@@ -311,7 +311,10 @@ export default function Layout({ title, description, children }) {
                 <NextLink href='/login' passHref>
                   <Link>
                     {' '}
-                    <Typography component='span'> Login</Typography>
+                    <Typography className={classes.login} component='span'>
+                      {' '}
+                      Login
+                    </Typography>
                   </Link>
                 </NextLink>
               )}
@@ -319,6 +322,7 @@ export default function Layout({ title, description, children }) {
           </Toolbar>
         </AppBar>{' '}
         <Container className={classes.lower2}>{children} </Container>
+        {/* No go  */}
         <Carousel />
         <Typography className={classes.lower}>
           {''} <br />
