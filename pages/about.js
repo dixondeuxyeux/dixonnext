@@ -79,7 +79,6 @@ export default function Layout({ title, description, children }) {
         main: '#dfab51',
       },
       secondary: {
-        light: '#ee4f10',
         main: '#e47124',
       },
     },
