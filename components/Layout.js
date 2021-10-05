@@ -326,7 +326,9 @@ export default function Layout({ title, description, children }) {
             collectors and art lovers alike.
             {''} <br />
             Please feel free to email me with any questions or ideas at{' '}
-            <a href='mailto:www.dixondeuxyeux@gmail.com'>dixondeuxyeux</a>
+            <a href='mailto:www.dixondeuxyeux@gmail.com'>
+              dixondeuxyeux@gmail.com
+            </a>
             {''} <br />
           </Typography>
         </footer>
