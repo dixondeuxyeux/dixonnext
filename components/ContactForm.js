@@ -43,6 +43,7 @@ export default function ContactForm() {
   return (
     <Container>
       <Typography
+        className={classes.field}
         variant='h6'
         color='textSecondary'
         component='h2'

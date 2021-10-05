@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto',
   },
   field: {
-    padding: 6,
+    padding: 8,
   },
 
   navbarButton: {
