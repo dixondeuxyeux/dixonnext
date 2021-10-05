@@ -80,7 +80,7 @@ export default function Layout({ title, description, children }) {
       },
       secondary: {
         light: '#ee4f10',
-        main: '#17aebe',
+        main: '#9bdbe2',
       },
     },
   })

@@ -174,7 +174,7 @@ export default function Layout({ title, description, children }) {
               </NextLink>
               <NextLink href='/about' passHref>
                 <Link>
-                  <Typography className={classes.h4}>About</Typography>
+                  <Typography className={classes.h4}>Contact</Typography>
                 </Link>
               </NextLink>
             </Box>
@@ -257,7 +257,7 @@ export default function Layout({ title, description, children }) {
                     ) : (
                       <ShoppingCartIcon
                         color='primary'
-                        className={classes.lower2}
+                        style={{ fontSize: '24px', marginBottom: '-4px' }}
                       />
                     )}
                   </Typography>
@@ -308,7 +308,10 @@ export default function Layout({ title, description, children }) {
                 <NextLink href='/login' passHref>
                   <Link>
                     {' '}
-                    <Typography component='span'> Login</Typography>
+                    <Typography className={classes.login} component='span'>
+                      {' '}
+                      Login
+                    </Typography>
                   </Link>
                 </NextLink>
               )}

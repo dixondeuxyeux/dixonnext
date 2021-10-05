@@ -88,9 +88,13 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '62px',
     marginBottom: -1,
     fontWeight: 500,
-    color: '#83aac4',
+    color: '#4587b1',
     fontSize: '1.1rem',
     opacity: 0.83,
+  },
+
+  login: {
+    fontSize: '1.2rem',
   },
 
   justify: {
@@ -103,10 +107,8 @@ const useStyles = makeStyles((theme) => ({
     border: 'none',
   },
   justify2: {
-    marginLeft: '350px',
-    marginRight: '350px',
-    padding: '20px 0px 30px 10px',
-    alignItems: 'center',
+    marginLeft: '30px',
+    marginRight: '50px',
     fontSize: '1.2rem',
     color: '#777',
     border: 'none',
@@ -122,6 +124,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 800,
     margin: '0 auto',
   },
+  field: {
+    padding: 6,
+  },
+
   navbarButton: {
     color: '#ffffff',
     fontSize: 18,
