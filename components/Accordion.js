@@ -6,11 +6,10 @@ import { Typography } from '@material-ui/core'
 import useStyles from '../utils/styles'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-
 export default function SimpleAccordion() {
   const classes = useStyles()
   return (
-    <div>
+    <div className={classes.justify2}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

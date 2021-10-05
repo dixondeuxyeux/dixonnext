@@ -80,7 +80,7 @@ export default function Layout({ title, description, children }) {
       },
       secondary: {
         light: '#ee4f10',
-        main: '#ee1a0b',
+        main: '#17aebe',
       },
     },
   })
@@ -319,7 +319,6 @@ export default function Layout({ title, description, children }) {
           </Toolbar>
         </AppBar>{' '}
         <Container className={classes.lower2}>{children} </Container>
-        
         <Carousel />
         <Typography className={classes.lower}>
           {''} <br />
@@ -332,14 +331,14 @@ export default function Layout({ title, description, children }) {
           <Accordion />
           <ContactForm />
         </Typography>
-        {/* <footer>
+        <footer>
           <br />
           <Typography className={classes.lower3}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
             {''} <br />
           </Typography>
-        </footer> */}
+        </footer>
       </ThemeProvider>
     </div>
   )

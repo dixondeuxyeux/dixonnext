@@ -1,32 +1,45 @@
-import emailjs from 'emailjs-com'
+// import emailjs from 'emailjs-com'
 import React, { useState } from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
-import useStyles from '../utils/styles'
-import { Container, Typography, TextField, Button } from '@material-ui/core'
+// import useStyles from '../utils/styles'
+import { Button } from '@material-ui/core/Button'
+import { Container } from '@material-ui/core/Container'
+import { Typography } from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core'
+import TextField from '@material-ui/core/TextField'
 
-export default function ContactForm() {
+const useStyles = makeStyles({
+  field: {
+    marginTop: 20,
+    marginBottom: 20,
+    display: 'block',
+  },
+})
+
+export default function ContactFormTwo() {
   const classes = useStyles()
-  function sendEmail(e) {
-    e.preventDefault()
 
-    emailjs
-      .sendForm(
-        'service_iq950vn',
-        'template_19euhak',
-        e.target,
-        'user_1053dH7HCzeuEXyun8RPD'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
-    e.target.reset()
-  }
+  // function sendEmail(e) {
+  //   e.preventDefault()
+
+  //   emailjs
+  //     .sendForm(
+  //       'service_iq950vn',
+  //       'template_19euhak',
+  //       e.target,
+  //       'user_1053dH7HCzeuEXyun8RPD'
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text)
+  //       },
+  //       (error) => {
+  //         console.log(error.text)
+  //       }
+  //     )
+  //   e.target.reset()
+  // }
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -48,10 +61,7 @@ export default function ContactForm() {
         component='h2'
         gutterBottom
       >
-        <br />
-        <br />
-        <br />
-        Please feel free to contact me with any question
+        Create a new Email Form
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={handleSubmit}>
@@ -59,7 +69,6 @@ export default function ContactForm() {
           onChange={(e) => setName(e.target.value)}
           className={classes.field}
           label='Name'
-          name='name'
           variant='outlined'
           color='secondary'
           fullWidth
@@ -69,7 +78,6 @@ export default function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           className={classes.field}
           label='Email'
-          name='email'
           variant='outlined'
           color='secondary'
           fullWidth
@@ -79,7 +87,6 @@ export default function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           className={classes.field}
           label='Message'
-          name='message'
           variant='outlined'
           color='secondary'
           fullWidth
@@ -87,12 +94,7 @@ export default function ContactForm() {
           multiline
           rows={4}
         />
-        <Button
-          onSubmit={sendEmail}
-          type='submit'
-          color='secondary'
-          variant='contained'
-        >
+        <Button type='submit' color='secondary' variant='contained'>
           Submit
         </Button>
       </form>
