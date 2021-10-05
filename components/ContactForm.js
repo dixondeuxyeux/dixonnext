@@ -2,11 +2,11 @@ import emailjs from 'emailjs-com'
 import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
-import useStyles from '../utils/styles'
+// import useStyles from '../utils/styles'
 import { Container, Typography, TextField, Button } from '@material-ui/core'
 
 export default function ContactForm() {
-  const classes = useStyles()
+  // const classes = useStyles()
   function sendEmail(e) {
     e.preventDefault()
 
@@ -43,7 +43,7 @@ export default function ContactForm() {
   return (
     <Container>
       <Typography
-        className={classes.field}
+        style={{ marginLeft: '8px' }}
         variant='h6'
         color='textSecondary'
         component='h2'
@@ -58,7 +58,7 @@ export default function ContactForm() {
       <form noValidate autoComplete='off' onSubmit={sendEmail}>
         <TextField
           // onChange={(e) => setName(e.target.value)}
-          className={classes.field}
+          style={{ padding: '8px' }}
           label='Name'
           name='name'
           variant='outlined'
@@ -68,7 +68,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setEmail(e.target.value)}
-          className={classes.field}
+          style={{ padding: '8px' }}
           label='Email'
           name='email'
           variant='outlined'
@@ -78,7 +78,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setEmail(e.target.value)}
-          className={classes.field}
+          style={{ padding: '8px' }}
           label='Subject'
           name='subject'
           variant='outlined'
@@ -88,7 +88,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setMessage(e.target.value)}
-          className={classes.field}
+          style={{ padding: '8px' }}
           label='Message'
           name='message'
           variant='outlined'
@@ -100,6 +100,7 @@ export default function ContactForm() {
         />
         <Button
           onSubmit={sendEmail}
+          style={{ padding: '8px', marginLeft: '8px' }}
           type='submit'
           color='secondary'
           variant='contained'
