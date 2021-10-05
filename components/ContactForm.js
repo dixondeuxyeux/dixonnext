@@ -76,6 +76,16 @@ export default function ContactForm() {
           required
         />
         <TextField
+          // onChange={(e) => setEmail(e.target.value)}
+          className={classes.field}
+          label='Subject'
+          name='subject'
+          variant='outlined'
+          color='secondary'
+          fullWidth
+          required
+        />
+        <TextField
           // onChange={(e) => setMessage(e.target.value)}
           className={classes.field}
           label='Message'
