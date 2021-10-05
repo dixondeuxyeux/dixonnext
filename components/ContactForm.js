@@ -1,5 +1,5 @@
 import emailjs from 'emailjs-com'
-import React, { useState } from 'react'
+import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
 import useStyles from '../utils/styles'
@@ -28,17 +28,17 @@ export default function ContactForm() {
     e.target.reset()
   }
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  // const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [message, setMessage] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    if (name && email && message) {
-      console.log(name, email, message)
-    }
-  }
+  //   if (name && email && message) {
+  //     console.log(name, email, message)
+  //   }
+  // }
 
   return (
     <Container>
@@ -54,9 +54,9 @@ export default function ContactForm() {
         Please feel free to contact me with any question
       </Typography>
 
-      <form noValidate autoComplete='off' onSubmit={handleSubmit}>
+      <form noValidate autoComplete='off' onSubmit={sendEmail}>
         <TextField
-          onChange={(e) => setName(e.target.value)}
+          // onChange={(e) => setName(e.target.value)}
           className={classes.field}
           label='Name'
           name='name'
@@ -66,7 +66,7 @@ export default function ContactForm() {
           required
         />
         <TextField
-          onChange={(e) => setEmail(e.target.value)}
+          // onChange={(e) => setEmail(e.target.value)}
           className={classes.field}
           label='Email'
           name='email'
@@ -76,7 +76,7 @@ export default function ContactForm() {
           required
         />
         <TextField
-          onChange={(e) => setMessage(e.target.value)}
+          // onChange={(e) => setMessage(e.target.value)}
           className={classes.field}
           label='Message'
           name='message'
