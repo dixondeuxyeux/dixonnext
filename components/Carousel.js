@@ -7,11 +7,11 @@ export default function Carousel() {
       <h2>{''}</h2>
       <div>
         <Image
-          src='/images/kobe3.jpg'
+          src='/images/bra.jpg'
           layout='responsive'
-          width={1800}
-          height={1152}
-          alt='Kobe'
+          width={1500}
+          height={400}
+          alt='bra'
         />
       </div>
     </Fragment>
