@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   lower4: {
-    paddingLeft: '95px',
+    paddingLeft: '64px',
     marginBottom: -6,
     fontWeight: 500,
     fontSize: '1rem',
@@ -102,10 +102,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   justify: {
-    marginLeft: '30px',
-    marginRight: '40px',
+    marginLeft: '20px',
+    marginRight: '20px',
     marginBottom: '40px',
-    padding: '20px 0px 30px 10px',
+    padding: '10px 0px 20px 10px',
     alignItems: 'center',
     fontSize: '1.2rem',
     color: '#777',

@@ -39,18 +39,16 @@ export default function ContactForm() {
   //     console.log(name, email, message)
   //   }
   // }
- 
 
   return (
     <Container>
       <Typography
-        style={{ marginLeft: '8px'}}
+        style={{ marginLeft: '8px' }}
         variant='h6'
         color='textSecondary'
         component='h2'
         gutterBottom
       >
-        
         Please feel free to contact me with any questions you may have
       </Typography>
 
