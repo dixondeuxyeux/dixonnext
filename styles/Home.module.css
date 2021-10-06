@@ -127,14 +127,31 @@
     marginleft: 14;
     padding: '0 4';
   }
+  h5: {
+    paddingleft: 12px;
+    marginbottom: -6;
+    fontweight: 400;
+    color: #2197e6;
+    fontsize: 1.1rem;
+    opacity: 0.73;
+  }
+
+  ,
 
   .justify: {
-    marginleft: '5px';
-    marginright: '5px';
-    padding: '10px 0px 15px 5px';
-    alignitems: 'center';
-    fontsize: '1.2rem';
-    color: '#777';
-    border: 'none';
+    marginleft: 5px;
+    marginright: 5px;
+    padding: 10px 0px 15px 5px;
+    alignitems: center;
+    fontsize: 1.2rem;
+    color: #777;
+    border: none;
+  }
+  lower4: {
+    paddingleft: 24px;
+    marginbottom: -6;
+    fontweight: 500;
+    fontsize: 1rem;
+    opacity: 0.63;
   }
 }

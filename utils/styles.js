@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '20px',
     marginRight: '20px',
     marginBottom: '40px',
-    padding: '10px 0px 20px 10px',
+    padding: '0px 0px 20px 10px',
     alignItems: 'center',
     fontSize: '1.2rem',
     color: '#777',
