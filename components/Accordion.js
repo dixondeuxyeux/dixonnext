@@ -234,10 +234,12 @@ export default function SimpleAccordion() {
               City&apos;s Black Bikers; &apos;Dakar Noir: Africa in the
               Black&apos;; &apos;The Kingdom of Original Man&apos;, Addis Ababa,
               Ethiopia; &apos;Small World&apos;; and &apos;A Month of Sundays:
-              Easter Photographs 1983-2020&apos;
+              Easter Photographs 1983-2020&apos;; &apos;Feeling the Spirit:
+              Ifetayo Cultural Arts Academy&apos;; &apos;The MAAFA Suite: St.
+              Paul Community Baptist Church&apos;
               <br />
               <br />
-              You might say I get around.
+              You might say I get around. Cheers, M
             </h3>
           </Typography>
         </AccordionDetails>
