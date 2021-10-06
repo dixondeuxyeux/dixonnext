@@ -39,19 +39,18 @@ export default function ContactForm() {
   //     console.log(name, email, message)
   //   }
   // }
+ 
 
   return (
     <Container>
       <Typography
-        style={{ marginLeft: '8px' }}
+        style={{ marginLeft: '8px'}}
         variant='h6'
         color='textSecondary'
         component='h2'
         gutterBottom
       >
-        <br />
-        <br />
-        <br />
+        
         Please feel free to contact me with any question
       </Typography>
 
@@ -100,7 +99,7 @@ export default function ContactForm() {
         />
         <Button
           onSubmit={sendEmail}
-          style={{ padding: '8px', marginLeft: '8px' }}
+          style={{ padding: '8px', marginLeft: '8px', marginBottom: '50px' }}
           type='submit'
           color='secondary'
           variant='contained'

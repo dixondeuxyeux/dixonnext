@@ -93,6 +93,11 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.83,
   },
 
+  background: {
+    backgroundColor: '#d2dde4',
+  
+  },
+
   login: {
     fontSize: '1.2rem',
   },
@@ -109,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
   justify2: {
     marginLeft: '30px',
     marginRight: '50px',
+    marginBottom: '100px',
     fontSize: '1.2rem',
     color: '#777',
     border: 'none',
