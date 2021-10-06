@@ -176,7 +176,7 @@ export default function Layout({ title, description, children }) {
               </NextLink>
               <NextLink href='/' passHref>
                 <Link>
-                  <Typography className={classes.h4}>Back</Typography>
+                  <Typography className={classes.h4}>Main</Typography>
                 </Link>
               </NextLink>
             </Box>
