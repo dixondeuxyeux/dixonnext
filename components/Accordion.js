@@ -218,8 +218,8 @@ export default function SimpleAccordion() {
           <Typography>
             <h3 className={classes.justify}>
               I am proud of the many wonderful clients and Art Directors with
-              whom I have worked throughout the years - some for nearly twenty
-              years before I found myself living abroad. A partial list
+              whom I have worked throughout the years - some for nearly two
+              decades before I found myself living abroad. A partial list
               includes: The Ford Foundation; United Way of New York; United Way
               Worldwide; The Commnwealth Fund; Lipman Hearne, PR; Towers Perrin;
               Rockefeller Bros. Fund; The Carnegie Corporation; Prime Access,
