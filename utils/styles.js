@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   lower4: {
-    paddingLeft: '62px',
+    paddingLeft: '95px',
     marginBottom: -6,
     fontWeight: 500,
     fontSize: '1rem',
