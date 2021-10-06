@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
   lower: {
     marginTop: -30,
-    paddingRight: 10,
+    paddingRight: 7,
   },
 
   lower2: {

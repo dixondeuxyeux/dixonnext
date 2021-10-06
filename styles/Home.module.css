@@ -135,8 +135,10 @@
     fontsize: 1.1rem;
     opacity: 0.73;
   }
-
-  ,
+  .lower: {
+    marginTop: -20;
+    paddingRight: 5,
+  },
 
   .justify: {
     marginleft: 5px;
