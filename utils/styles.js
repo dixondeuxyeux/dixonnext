@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
     // backgroundColor: '#e7f1f8',
     // borderBottom: '.5px solid #12738E',
-    padding: '3px 3px 4px 2px',
-    marginLeft: '62px',
+    padding: '24px 3px 20px 2px',
+    marginLeft: '32px',
     marginBottom: -1,
     fontWeight: 500,
     color: '#4587b1',
@@ -95,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
 
   background: {
     backgroundColor: '#d2dde4',
-  
   },
 
   login: {
@@ -103,8 +102,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   justify: {
-    marginLeft: '50px',
-    marginRight: '50px',
+    marginLeft: '30px',
+    marginRight: '40px',
+    marginBottom: '40px',
     padding: '20px 0px 30px 10px',
     alignItems: 'center',
     fontSize: '1.2rem',
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   justify2: {
     marginLeft: '30px',
-    marginRight: '50px',
+    marginRight: '20px',
     marginBottom: '100px',
     fontSize: '1.2rem',
     color: '#777',

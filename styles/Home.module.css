@@ -127,4 +127,14 @@
     marginleft: 14;
     padding: '0 4';
   }
+
+  .justify: {
+    marginleft: '5px';
+    marginright: '5px';
+    padding: '10px 0px 15px 5px';
+    alignitems: 'center';
+    fontsize: '1.2rem';
+    color: '#777';
+    border: 'none';
+  }
 }

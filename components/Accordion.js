@@ -17,7 +17,7 @@ export default function SimpleAccordion() {
           id='panel1a-header'
         >
           <Typography className={classes.lower5}>
-            Information about Dixon / Deux Yeux Photographie
+            Some Information About Dixon / Deux Yeux Photographie
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -98,7 +98,7 @@ export default function SimpleAccordion() {
           id='panel2a-header'
         >
           <Typography className={classes.lower5}>
-            Some Information about Digital Prints
+            Some Information About Digital Prints
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -155,7 +155,7 @@ export default function SimpleAccordion() {
           id='panel2a-header'
         >
           <Typography className={classes.lower5}>
-            Some Information about Shipping
+            Some Information About Shipping
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -180,7 +180,7 @@ export default function SimpleAccordion() {
           id='panel2a-header'
         >
           <Typography className={classes.lower5}>
-            Some Information about Print Sizes and Signed Editions
+            Some Information About Print Sizes and Signed Editions
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -200,6 +200,44 @@ export default function SimpleAccordion() {
               <br />I sign each edition print on the back and incrementally
               raise the price after every sale. You will receive a signed print
               out to accompany your purchase with your unique edition number.
+            </h3>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls='panel2a-content'
+          id='panel2a-header'
+        >
+          <Typography className={classes.lower5}>
+            Some Information About My Clients
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <h3 className={classes.justify}>
+              I am proud of the many wonderful clients and Art Directors with
+              whom I have worked throughout the years - some for nearly twenty
+              years before I found myself living abroad. A partial list
+              includes: The Ford Foundation; United Way of New York; United Way
+              Worldwide; The Commnwealth Fund; Lipman Hearne, PR; Towers Perrin;
+              Rockefeller Bros. Fund; The Carnegie Corporation; Prime Access,
+              McCann Erikson, and Young and Rubicam advertising agencies, UNICEF
+              New York, Ethiopia, and Swaziland; World Food Program, Senegal;
+              European PressPhoto Agency; TrustAfrica; The Francophonie
+              Organization; The King Badouin Foundation; The New York Times and
+              The Village Voice.
+              <br />
+              <br />
+              My book publications include: &apos;Brooklyn Kings: New York
+              City&apos;s Black Bikers; &apos;Dakar Noir: Africa in the
+              Black&apos;; &apos;The Kingdom of Original Man&apos;, Addis Ababa,
+              Ethiopia; &apos;Small World&apos;; and &apos;A Month of Sundays:
+              Easter Photographs 1983-2020&apos;
+              <br />
+              <br />
+              You might say I get around.
             </h3>
           </Typography>
         </AccordionDetails>

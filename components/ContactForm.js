@@ -51,7 +51,7 @@ export default function ContactForm() {
         gutterBottom
       >
         
-        Please feel free to contact me with any question
+        Please feel free to contact me with any questions you may have
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={sendEmail}>

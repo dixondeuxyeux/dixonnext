@@ -29,6 +29,7 @@ import {
   Divider,
   ListItemText,
   InputBase,
+  Grid,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
@@ -330,8 +331,14 @@ export default function Layout({ title, description, children }) {
           </h5>
           <br />
           {''} <br />
-          <Accordion />
-          <ContactForm />
+          <Grid container>
+            <Grid item md={8} xs={12}>
+              <Accordion />
+            </Grid>
+            <Grid item md={4} xs={12}>
+              <ContactForm />
+            </Grid>
+          </Grid>
         </Typography>
         <footer>
           <br />
