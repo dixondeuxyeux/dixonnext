@@ -326,7 +326,7 @@ export default function Layout({ title, description, children }) {
         <Typography className={classes.lower}>
           {''} <br />
           <h5 className={classes.lower4}>
-            Photo: bad Hair Day at the Pool, Banjul, The Gambia, 2019{' '}
+            Photo: It&apos;s Always Sunny in Africa, Dakar, 2018{' '}
           </h5>
           <br />
           {''} <br />

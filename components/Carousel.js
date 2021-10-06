@@ -7,10 +7,10 @@ export default function Carousel() {
       <h2>{''}</h2>
       <div>
         <Image
-          src='/images/bra.jpg'
+          src='/images/swimbanner2.jpg'
           layout='responsive'
           width={1500}
-          height={400}
+          height={822}
           alt='bra'
         />
       </div>
