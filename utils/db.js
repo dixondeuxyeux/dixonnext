@@ -19,6 +19,8 @@ async function connect() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
+    connectTimeoutMS: 30000 , 
+    keepAlive: 1,
   })
   console.log('new connection')
   connection.isConnected = db.connections[0].readyState
