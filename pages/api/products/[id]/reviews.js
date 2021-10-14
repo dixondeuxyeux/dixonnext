@@ -12,7 +12,7 @@ const handler = nextConnect({
 
 handler.get(async (req, res) => {
   db.connect()
-  const product = await Product.findOne(req.query.id)
+  const product = await Product.findById(req.query.id)
   await db.disconnect()
   if (product) {
     res.send(product.reviews)
@@ -23,7 +23,7 @@ handler.get(async (req, res) => {
 
 handler.use(isAuth).post(async (req, res) => {
   await db.connect()
-  const product = await Product.findOne(req.query.id)
+  const product = await Product.findById(req.query.id)
   if (product) {
     const existReview = product.reviews.find((x) => x.user == req.user._id)
     if (existReview) {
@@ -37,7 +37,7 @@ handler.use(isAuth).post(async (req, res) => {
         }
       )
 
-      const updatedProduct = await Product.findOne(req.query.id)
+      const updatedProduct = await Product.findById(req.query.id)
       updatedProduct.numReviews = updatedProduct.reviews.length
       updatedProduct.rating =
         updatedProduct.reviews.reduce((a, c) => c.rating + a, 0) /
