@@ -19,8 +19,7 @@ async function connect() {
     useUnifiedTopology: true,
     keepAlive: 1, 
     connectTimeoutMS: 30000,
-    reconnectTries: 30, 
-    reconnectInterval: 5000 
+   
   })
 
   connection.isConnected = db.connections[0].readyState
