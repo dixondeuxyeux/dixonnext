@@ -11,9 +11,9 @@ const handler = nextConnect({
 })
 
 handler.get(async (req, res) => {
-  await db.connect()
+  db.connect()
   const product = await Product.findById(req.query.id)
-  await db.disconnect()
+  db.disconnect()
   if (product) {
     res.send(product.reviews)
   } else {
