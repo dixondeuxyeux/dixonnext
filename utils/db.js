@@ -17,9 +17,7 @@ async function connect() {
   const db = await mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    autoReconnect: true,
-    keepAlive: true,
+    keepAliveInitialDelay: 300000,
     connectTimeoutMS: 30000,
     socketTimeoutMS: 30000,
   })
