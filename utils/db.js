@@ -18,8 +18,10 @@ async function connect() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    keepAlive: 1,
+    autoReconnect: true,
+    keepAlive: true,
     connectTimeoutMS: 30000,
+    socketTimeoutMS: 30000,
   })
 
   connection.isConnected = db.connections[0].readyState
