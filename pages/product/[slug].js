@@ -119,7 +119,7 @@ export default function ProductScreen(props) {
               <Typography>Category: {product.category}</Typography>
             </ListItem>
             <ListItem>
-              <Typography>Brand: {product.brand}</Typography>
+              <Typography>Surface: {product.surface}</Typography>
             </ListItem>
             <ListItem>
               <Rating value={product.rating} readOnly></Rating>

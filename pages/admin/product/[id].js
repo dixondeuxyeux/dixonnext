@@ -91,7 +91,7 @@ function ProductEdit({ params }) {
           setValue('featuredImage', data.featuredImage)
           setIsFeatured(data.isFeatured)
           setValue('category', data.category)
-          setValue('brand', data.brand)
+          setValue('surface', data.surface)
           setValue('countInStock', data.countInStock)
           setValue('description', data.description)
         } catch (err) {
@@ -130,7 +130,7 @@ function ProductEdit({ params }) {
     category,
     image,
     featuredImage,
-    brand,
+    surface,
     countInStock,
     description,
   }) => {
@@ -147,7 +147,7 @@ function ProductEdit({ params }) {
           image,
           isFeatured,
           featuredImage,
-          brand,
+          surface,
           countInStock,
           description,
         },
@@ -370,7 +370,7 @@ function ProductEdit({ params }) {
                     </ListItem>
                     <ListItem>
                       <Controller
-                        name='brand'
+                        name='surface'
                         control={control}
                         defaultValue=''
                         rules={{
@@ -380,10 +380,10 @@ function ProductEdit({ params }) {
                           <TextField
                             variant='outlined'
                             fullWidth
-                            id='brand'
-                            label='Brand'
-                            error={Boolean(errors.brand)}
-                            helperText={errors.brand ? 'Brand is required' : ''}
+                            id='surface'
+                            label='Surface'
+                            error={Boolean(errors.surface)}
+                            helperText={errors.surface ? 'Surface is required' : ''}
                             {...field}
                           ></TextField>
                         )}
