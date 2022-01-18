@@ -320,7 +320,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component='footer' sx={classes.footer}>
-          <Typography sx={classes.lower2}>
+          <Typography sx={classes.lower2a}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
             The Dixon Print Shop offers exhibition quality digital prints for
