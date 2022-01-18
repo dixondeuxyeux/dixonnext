@@ -1,6 +1,20 @@
-/* eslint-disable @next/next/no-img-element */
-import React, { useContext, useState, useEffect } from 'react'
 import Head from 'next/head'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+
+import { createTheme } from '@mui/material/styles'
+
+import useMediaQuery from '@mui/material/useMediaQuery'
+import React, { useContext, useEffect, useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import CancelIcon from '@mui/icons-material/Cancel'
+import SearchIcon from '@mui/icons-material/Search'
+import classes from '../utils/classes'
+import { getError } from '../utils/error'
+import Cookies from 'js-cookie'
+import { useSnackbar } from 'notistack'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 import Image from 'next/image'
 import {
@@ -9,9 +23,6 @@ import {
   Typography,
   Container,
   Link,
-  createTheme,
-  ThemeProvider,
-  CssBaseline,
   Switch,
   Badge,
   Button,
@@ -25,25 +36,23 @@ import {
   Divider,
   ListItemText,
   InputBase,
-} from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-import CancelIcon from '@material-ui/icons/Cancel'
-import SearchIcon from '@material-ui/icons/Search'
-import useStyles from '../utils/styles'
-import { Store } from '../utils/Store'
-import { getError } from '../utils/error'
-import Cookies from 'js-cookie'
+} from '@mui/material'
 
-import { useRouter } from 'next/router'
-import { useSnackbar } from 'notistack'
-import axios from 'axios'
+import { Store } from '../utils/Store'
 
 export default function Layout({ title, description, children }) {
-  const router = useRouter()
   const { state, dispatch } = useContext(Store)
   const { darkMode, cart, userInfo } = state
+
   const theme = createTheme({
+    components: {
+      MuiLink: {
+        defaultProps: {
+          underline: 'hover',
+        },
+      },
+    },
+
     typography: {
       h1: {
         fontSize: '1.6rem',
@@ -55,34 +64,21 @@ export default function Layout({ title, description, children }) {
         fontWeight: 400,
         margin: '1rem 0',
       },
-      h4: {
-        fontSize: '1.8rem',
-        fontWeight: 400,
-        margin: '1rem 0',
-      },
-
-      a: {
-        fontWeight: 400,
-        margin: '1rem 0',
-      },
-
-      body1: {
-        fontWeight: 'normal',
-      },
     },
     palette: {
-      type: darkMode ? 'dark' : 'light',
+      mode: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#dfab51',
+        main: '#f0c000',
       },
       secondary: {
-        main: '#e47124',
+        main: '#208080',
       },
     },
   })
-  const classes = useStyles()
 
-  const [sidebarVisible, setSidebarVisible] = useState(false)
+  const router = useRouter()
+
+  const [sidbarVisible, setSidebarVisible] = useState(false)
   const sidebarOpenHandler = () => {
     setSidebarVisible(true)
   }
@@ -110,9 +106,10 @@ export default function Layout({ title, description, children }) {
     e.preventDefault()
     router.push(`/search?query=${query}`)
   }
+
   useEffect(() => {
     fetchCategories()
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [])
 
   const darkModeChangeHandler = () => {
     dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' })
@@ -134,13 +131,14 @@ export default function Layout({ title, description, children }) {
     dispatch({ type: 'USER_LOGOUT' })
     Cookies.remove('userInfo')
     Cookies.remove('cartItems')
-    Cookies.remove('shippingAddress')
+    Cookies.remove('shippinhAddress')
     Cookies.remove('paymentMethod')
     router.push('/')
   }
 
+  const isDesktop = useMediaQuery('(min-width:600px)')
   return (
-    <div>
+    <>
       <Head>
         <title>
           {title ? `${title} - Dixon Print Shop` : 'Dixon Print Shop'}
@@ -149,20 +147,19 @@ export default function Layout({ title, description, children }) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppBar position='static' className={classes.navbar}>
-          <Toolbar className={classes.toolbar}>
+        <AppBar position='static' sx={classes.appbar}>
+          <Toolbar sx={classes.toolbar}>
             <Box display='flex' alignItems='center'>
               <IconButton
                 edge='start'
                 aria-label='open drawer'
                 onClick={sidebarOpenHandler}
-                className={classes.menuButton}
+                sx={classes.menuButton}
               >
-                <MenuIcon className={classes.navbarButton2} />
+                <MenuIcon sx={classes.navbarButton2} />
               </IconButton>
               <NextLink href='/' passHref>
-                <Link className={classes.searchSection}>
-                  {/* <Typography>Dixon Print Shop</Typography> */}
+                <Link sx={classes.searchSection}>
                   <Image
                     src={require('../public/images/dixonlogo4J.svg')}
                     width={100}
@@ -171,15 +168,16 @@ export default function Layout({ title, description, children }) {
                   />
                 </Link>
               </NextLink>
+
               <NextLink href='/about' passHref>
                 <Link>
-                  <Typography className={classes.h4}>Contact</Typography>
+                  <Typography sx={classes.h4}>Contact</Typography>
                 </Link>
               </NextLink>
             </Box>
             <Drawer
               anchor='left'
-              open={sidebarVisible}
+              open={sidbarVisible}
               onClose={sidebarCloseHandler}
             >
               <List>
@@ -189,7 +187,7 @@ export default function Layout({ title, description, children }) {
                     alignItems='center'
                     justifyContent='space-between'
                   >
-                    <Typography>Shop by Category</Typography>
+                    <Typography>Shopping by category</Typography>
                     <IconButton
                       aria-label='close'
                       onClick={sidebarCloseHandler}
@@ -210,37 +208,37 @@ export default function Layout({ title, description, children }) {
                       component='a'
                       onClick={sidebarCloseHandler}
                     >
-                      <ListItemText primary={category}> </ListItemText>
+                      <ListItemText primary={category}></ListItemText>
                     </ListItem>
                   </NextLink>
                 ))}
               </List>
             </Drawer>
 
-            <div className={classes.searchSection}>
-              <form onSubmit={submitHandler} className={classes.searchForm}>
-                <InputBase
-                  name='query'
-                  className={classes.searchInput}
-                  placeholder='Search Photographs'
-                  onChange={queryChangeHandler}
-                />
-                <IconButton
-                  type='submit'
-                  className={classes.iconButton}
-                  aria-label='search'
-                >
-                  <SearchIcon />
-                </IconButton>
+            <Box sx={isDesktop ? classes.visible : classes.hidden}>
+              <form onSubmit={submitHandler}>
+                <Box sx={classes.searchForm}>
+                  <InputBase
+                    name='query'
+                    sx={classes.searchInput}
+                    placeholder='Search Photographs'
+                    onChange={queryChangeHandler}
+                  />
+                  <IconButton
+                    type='submit'
+                    sx={classes.iconButton}
+                    aria-label='search'
+                  >
+                    <SearchIcon />
+                  </IconButton>
+                </Box>
               </form>
-            </div>
-
-            <div>
+            </Box>
+            <Box>
               <Switch
                 checked={darkMode}
                 onChange={darkModeChangeHandler}
               ></Switch>
-
               <NextLink href='/cart' passHref>
                 <Link>
                   <Typography component='span'>
@@ -251,12 +249,16 @@ export default function Layout({ title, description, children }) {
                         color='primary'
                         badgeContent={cart.cartItems.length}
                       >
-                        <ShoppingCartIcon />
+                        <ShoppingCartIcon sx={classes.navbarButton3} />
                       </Badge>
                     ) : (
                       <ShoppingCartIcon
                         color='primary'
-                        style={{ fontSize: '24px', marginBottom: '-8px' }}
+                        style={{
+                          fontSize: '24px',
+
+                          marginBottom: '-8px',
+                        }}
                       />
                     )}
                   </Typography>
@@ -268,7 +270,7 @@ export default function Layout({ title, description, children }) {
                     aria-controls='simple-menu'
                     aria-haspopup='true'
                     onClick={loginClickHandler}
-                    className={classes.navbarButton}
+                    sx={classes.navbarButton}
                   >
                     {userInfo.name}
                   </Button>
@@ -289,9 +291,9 @@ export default function Layout({ title, description, children }) {
                         loginMenuCloseHandler(e, '/order-history')
                       }
                     >
-                      Order History
+                      Order Hisotry
                     </MenuItem>
-                    {userInfo && userInfo.isAdmin && (
+                    {userInfo.isAdmin && (
                       <MenuItem
                         onClick={(e) =>
                           loginMenuCloseHandler(e, '/admin/dashboard')
@@ -306,20 +308,18 @@ export default function Layout({ title, description, children }) {
               ) : (
                 <NextLink href='/login' passHref>
                   <Link>
-                    {' '}
-                    <Typography className={classes.login} component='span'>
-                      {' '}
-                      Login
-                    </Typography>
+                    <Typography component='span'>Login</Typography>
                   </Link>
                 </NextLink>
               )}
-            </div>
+            </Box>
           </Toolbar>
         </AppBar>
-        <Container className={classes.main}>{children}</Container>
-        <footer className={classes.footer}>
-          <Typography className={classes.lower2}>
+        <Container component='main' sx={classes.main}>
+          {children}
+        </Container>
+        <Box component='footer' sx={classes.footer}>
+          <Typography sx={classes.lower2}>
             All rights reserved. © 2021 Dixon / Deux Yeux Photographie
             <br />
             The Dixon Print Shop offers exhibition quality digital prints for
@@ -331,8 +331,8 @@ export default function Layout({ title, description, children }) {
             </a>
             {''} <br />
           </Typography>
-        </footer>
+        </Box>
       </ThemeProvider>
-    </div>
+    </>
   )
 }

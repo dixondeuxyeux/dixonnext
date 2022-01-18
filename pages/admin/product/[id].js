@@ -15,13 +15,14 @@ import {
   CircularProgress,
   FormControlLabel,
   Checkbox,
-} from '@material-ui/core'
+} from '@mui/material'
 import { getError } from '../../../utils/error'
 import { Store } from '../../../utils/Store'
 import Layout from '../../../components/Layout'
-import useStyles from '../../../utils/styles'
 import { Controller, useForm } from 'react-hook-form'
 import { useSnackbar } from 'notistack'
+import Form from '../../../components/Form'
+import classes from '../../../utils/classes'
 
 function reducer(state, action) {
   switch (action.type) {
@@ -69,7 +70,7 @@ function ProductEdit({ params }) {
   } = useForm()
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
   const router = useRouter()
-  const classes = useStyles()
+
   const { userInfo } = state
 
   useEffect(() => {
@@ -90,7 +91,7 @@ function ProductEdit({ params }) {
           setValue('featuredImage', data.featuredImage)
           setIsFeatured(data.isFeatured)
           setValue('category', data.category)
-          setValue('surface', data.surface)
+          setValue('brand', data.brand)
           setValue('countInStock', data.countInStock)
           setValue('description', data.description)
         } catch (err) {
@@ -128,7 +129,7 @@ function ProductEdit({ params }) {
     category,
     image,
     featuredImage,
-    surface,
+    brand,
     countInStock,
     description,
   }) => {
@@ -145,7 +146,7 @@ function ProductEdit({ params }) {
           image,
           isFeatured,
           featuredImage,
-          surface,
+          brand,
           countInStock,
           description,
         },
@@ -166,7 +167,7 @@ function ProductEdit({ params }) {
     <Layout title={`Edit Product ${productId}`}>
       <Grid container spacing={1}>
         <Grid item md={3} xs={12}>
-          <Card className={classes.section}>
+          <Card sx={classes.section}>
             <List>
               <NextLink href='/admin/dashboard' passHref>
                 <ListItem button component='a'>
@@ -192,7 +193,7 @@ function ProductEdit({ params }) {
           </Card>
         </Grid>
         <Grid item md={9} xs={12}>
-          <Card className={classes.section}>
+          <Card sx={classes.section}>
             <List>
               <ListItem>
                 <Typography component='h1' variant='h1'>
@@ -201,15 +202,10 @@ function ProductEdit({ params }) {
               </ListItem>
               <ListItem>
                 {loading && <CircularProgress></CircularProgress>}
-                {error && (
-                  <Typography className={classes.error}>{error}</Typography>
-                )}
+                {error && <Typography sx={classes.error}>{error}</Typography>}
               </ListItem>
               <ListItem>
-                <form
-                  onSubmit={handleSubmit(submitHandler)}
-                  className={classes.form}
-                >
+                <Form onSubmit={handleSubmit(submitHandler)}>
                   <List>
                     <ListItem>
                       <Controller
@@ -373,7 +369,7 @@ function ProductEdit({ params }) {
                     </ListItem>
                     <ListItem>
                       <Controller
-                        name='surface'
+                        name='brand'
                         control={control}
                         defaultValue=''
                         rules={{
@@ -383,12 +379,10 @@ function ProductEdit({ params }) {
                           <TextField
                             variant='outlined'
                             fullWidth
-                            id='surface'
-                            label='Surface'
-                            error={Boolean(errors.surface)}
-                            helperText={
-                              errors.surface ? 'Surface is required' : ''
-                            }
+                            id='brand'
+                            label='Brand'
+                            error={Boolean(errors.brand)}
+                            helperText={errors.brand ? 'Brand is required' : ''}
                             {...field}
                           ></TextField>
                         )}
@@ -411,7 +405,7 @@ function ProductEdit({ params }) {
                             error={Boolean(errors.countInStock)}
                             helperText={
                               errors.countInStock
-                                ? 'Count in Stock is required'
+                                ? 'Count in stock is required'
                                 : ''
                             }
                             {...field}
@@ -458,7 +452,7 @@ function ProductEdit({ params }) {
                       {loadingUpdate && <CircularProgress />}
                     </ListItem>
                   </List>
-                </form>
+                </Form>
               </ListItem>
             </List>
           </Card>

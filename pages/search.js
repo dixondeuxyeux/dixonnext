@@ -7,60 +7,56 @@ import {
   MenuItem,
   Select,
   Typography,
-} from '@material-ui/core'
-import CancelIcon from '@material-ui/icons/Cancel'
+} from '@mui/material'
+import CancelIcon from '@mui/icons-material/Cancel'
 import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
 import Layout from '../components/Layout'
 import db from '../utils/db'
 import Product from '../models/Product'
-import useStyles from '../utils/styles'
+import classes from '../utils/classes'
 import ProductItem from '../components/ProductItem'
 import { Store } from '../utils/Store'
 import axios from 'axios'
-import Rating from '@material-ui/lab/Rating'
-import { Pagination } from '@material-ui/lab'
+import Rating from '@mui/material/Rating'
+import { Pagination } from '@mui/material'
 
-const PAGE_SIZE = 9
+const PAGE_SIZE = 3
 
 const prices = [
   {
-    name: '$200 to $350',
-    value: '200-350',
+    name: '$1 to $50',
+    value: '1-50',
   },
   {
-    name: '$351 to $500',
-    value: '351-500',
+    name: '$51 to $200',
+    value: '51-200',
   },
   {
-    name: '$501 to $750',
-    value: '501-750',
-  },
-  {
-    name: '$751 to $1000',
-    value: '701-1000',
+    name: '$201 to $1000',
+    value: '201-1000',
   },
 ]
 
 const ratings = [1, 2, 3, 4, 5]
 
 export default function Search(props) {
-  const classes = useStyles()
   const router = useRouter()
+
   const {
     query = 'all',
     category = 'all',
-    surface = 'all',
+    brand = 'all',
     price = 'all',
     rating = 'all',
     sort = 'featured',
   } = router.query
-  const { products, countProducts, categories, surfaces, pages } = props
+  const { products, countProducts, categories, brands, pages } = props
 
   const filterSearch = ({
     page,
     category,
-    surface,
+    brand,
     sort,
     min,
     max,
@@ -74,7 +70,7 @@ export default function Search(props) {
     if (searchQuery) query.searchQuery = searchQuery
     if (sort) query.sort = sort
     if (category) query.category = category
-    if (surface) query.surface = surface
+    if (brand) query.brand = brand
     if (price) query.price = price
     if (rating) query.rating = rating
     if (min) query.min ? query.min : query.min === 0 ? 0 : min
@@ -91,8 +87,8 @@ export default function Search(props) {
   const pageHandler = (e, page) => {
     filterSearch({ page })
   }
-  const surfaceHandler = (e) => {
-    filterSearch({ surface: e.target.value })
+  const brandHandler = (e) => {
+    filterSearch({ brand: e.target.value })
   }
   const sortHandler = (e) => {
     filterSearch({ sort: e.target.value })
@@ -117,12 +113,12 @@ export default function Search(props) {
     router.push('/cart')
   }
   return (
-    <Layout title='Search'>
-      <Grid className={classes.mt1} container spacing={1}>
+    <Layout title='search'>
+      <Grid sx={classes.section} container spacing={1}>
         <Grid item md={3}>
           <List>
             <ListItem>
-              <Box className={classes.fullWidth}>
+              <Box sx={classes.fullWidth}>
                 <Typography>Categories</Typography>
                 <Select fullWidth value={category} onChange={categoryHandler}>
                   <MenuItem value='all'>All</MenuItem>
@@ -136,21 +132,21 @@ export default function Search(props) {
               </Box>
             </ListItem>
             <ListItem>
-              <Box className={classes.fullWidth}>
-                <Typography>Surfaces</Typography>
-                <Select value={surface} onChange={surfaceHandler} fullWidth>
+              <Box sx={classes.fullWidth}>
+                <Typography>Brands</Typography>
+                <Select value={brand} onChange={brandHandler} fullWidth>
                   <MenuItem value='all'>All</MenuItem>
-                  {surfaces &&
-                    surfaces.map((surface) => (
-                      <MenuItem key={surface} value={surface}>
-                        {surface}
+                  {brands &&
+                    brands.map((brand) => (
+                      <MenuItem key={brand} value={brand}>
+                        {brand}
                       </MenuItem>
                     ))}
                 </Select>
               </Box>
             </ListItem>
             <ListItem>
-              <Box className={classes.fullWidth}>
+              <Box sx={classes.fullWidth}>
                 <Typography>Prices</Typography>
                 <Select value={price} onChange={priceHandler} fullWidth>
                   <MenuItem value='all'>All</MenuItem>
@@ -163,7 +159,7 @@ export default function Search(props) {
               </Box>
             </ListItem>
             <ListItem>
-              <Box className={classes.fullWidth}>
+              <Box sx={classes.fullWidth}>
                 <Typography>Ratings</Typography>
                 <Select value={rating} onChange={ratingHandler} fullWidth>
                   <MenuItem value='all'>All</MenuItem>
@@ -184,12 +180,12 @@ export default function Search(props) {
               {products.length === 0 ? 'No' : countProducts} Results
               {query !== 'all' && query !== '' && ' : ' + query}
               {category !== 'all' && ' : ' + category}
-              {surface !== 'all' && ' : ' + surface}
+              {brand !== 'all' && ' : ' + brand}
               {price !== 'all' && ' : Price ' + price}
               {rating !== 'all' && ' : Rating ' + rating + ' & up'}
               {(query !== 'all' && query !== '') ||
               category !== 'all' ||
-              surface !== 'all' ||
+              brand !== 'all' ||
               rating !== 'all' ||
               price !== 'all' ? (
                 <Button onClick={() => router.push('/search')}>
@@ -198,7 +194,7 @@ export default function Search(props) {
               ) : null}
             </Grid>
             <Grid item>
-              <Typography component='span' className={classes.sort}>
+              <Typography component='span' sx={classes.sort}>
                 Sort by
               </Typography>
               <Select value={sort} onChange={sortHandler}>
@@ -210,7 +206,7 @@ export default function Search(props) {
               </Select>
             </Grid>
           </Grid>
-          <Grid className={classes.mt1} container spacing={3}>
+          <Grid sx={classes.section} container spacing={3}>
             {products.map((product) => (
               <Grid item md={4} key={product.name}>
                 <ProductItem
@@ -221,7 +217,7 @@ export default function Search(props) {
             ))}
           </Grid>
           <Pagination
-            className={classes.mt1}
+            sx={classes.section}
             defaultPage={parseInt(query.page || '1')}
             count={pages}
             onChange={pageHandler}
@@ -237,7 +233,7 @@ export async function getServerSideProps({ query }) {
   const pageSize = query.pageSize || PAGE_SIZE
   const page = query.page || 1
   const category = query.category || ''
-  const surface = query.surface || ''
+  const brand = query.brand || ''
   const price = query.price || ''
   const rating = query.rating || ''
   const sort = query.sort || ''
@@ -253,7 +249,7 @@ export async function getServerSideProps({ query }) {
         }
       : {}
   const categoryFilter = category && category !== 'all' ? { category } : {}
-  const surfaceFilter = surface && surface !== 'all' ? { surface } : {}
+  const brandFilter = brand && brand !== 'all' ? { brand } : {}
   const ratingFilter =
     rating && rating !== 'all'
       ? {
@@ -287,13 +283,13 @@ export async function getServerSideProps({ query }) {
       : { _id: -1 }
 
   const categories = await Product.find().distinct('category')
-  const surfaces = await Product.find().distinct('surface')
+  const brands = await Product.find().distinct('brand')
   const productDocs = await Product.find(
     {
       ...queryFilter,
       ...categoryFilter,
       ...priceFilter,
-      ...surfaceFilter,
+      ...brandFilter,
       ...ratingFilter,
     },
     '-reviews'
@@ -307,7 +303,7 @@ export async function getServerSideProps({ query }) {
     ...queryFilter,
     ...categoryFilter,
     ...priceFilter,
-    ...surfaceFilter,
+    ...brandFilter,
     ...ratingFilter,
   })
   await db.disconnect()
@@ -321,7 +317,7 @@ export async function getServerSideProps({ query }) {
       page,
       pages: Math.ceil(countProducts / pageSize),
       categories,
-      surfaces,
+      brands,
     },
   }
 }

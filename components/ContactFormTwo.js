@@ -3,19 +3,19 @@ import React, { useState } from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
 // import useStyles from '../utils/styles'
-import { Button } from '@material-ui/core/Button'
-import { Container } from '@material-ui/core/Container'
-import { Typography } from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core'
-import TextField from '@material-ui/core/TextField'
+import { Button } from '@mui/material'
+import { Container } from '@mui/material'
+import { Typography } from '@mui/material'
+import { makeStyles } from '@mui/material'
+import TextField from '@mui/material'
 
-const useStyles = makeStyles({
+const classes = {
   field: {
     marginTop: 20,
     marginBottom: 20,
     display: 'block',
   },
-})
+}
 
 export default function ContactFormTwo() {
   const classes = useStyles()

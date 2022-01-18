@@ -3,7 +3,7 @@ import React from 'react'
 import { init } from 'emailjs-com'
 init('user_1053dH7HCzeuEXyun8RPD')
 // import useStyles from '../utils/styles'
-import { Container, Typography, TextField, Button } from '@material-ui/core'
+import { Container, Typography, TextField, Button } from '@mui/material'
 
 export default function ContactForm() {
   // const classes = useStyles()

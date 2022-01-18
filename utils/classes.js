@@ -1,5 +1,124 @@
-import { makeStyles } from '@material-ui/core'
-const useStyles = makeStyles((theme) => ({
+const classes = {
+  // common
+  flex: {
+    display: 'flex',
+  },
+  hidden: {
+    display: 'none',
+  },
+  visible: {
+    display: 'initial',
+  },
+  sort: {
+    marginRight: 1,
+  },
+  fullHeight: { height: '100vh' },
+  fullWidth: {
+    width: '100%',
+  },
+  error: {
+    color: '#f04040',
+  },
+
+  //layout
+  main: {
+    marginTop: 2,
+    minHeight: '80vh',
+  },
+  footer: {
+    padding: '1rem',
+    // background: '#27415a',
+    marginTop: '3rem',
+    // marginBottom: '1rem',
+    textAlign: 'center',
+  },
+  section: {
+    marginTop: 1,
+    marginBottom: 1,
+  },
+
+  // header
+  appbar: {
+    backgroundColor: '#27415a',
+    '& a': {
+      color: '#ffffff',
+      marginLeft: 1,
+    },
+  },
+
+  toolbar: {
+    justifyContent: 'space-between',
+  },
+  surface: {
+    fontWeight: 'bold',
+    fontSize: '1.5rem',
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  navbarButton: {
+    color: '#ffffff',
+    fontSize: 32,
+    textTransform: 'initial',
+  },
+
+  navbarButton2: {
+    color: '#ffffff',
+    fontSize: 32,
+    marginBottom: 1,
+    textTransform: 'initial',
+  },
+
+  menuButton: {
+    padding: 0,
+  },
+
+  // Search
+
+  searchForm: {
+    border: '1px solid #ffffff',
+    backgroundColor: '#ffffff',
+    borderRadius: 1,
+  },
+  searchInput: {
+    paddingLeft: 3,
+    color: '#000000',
+    '& :: placeholder': {
+      color: '#606060',
+    },
+  },
+
+  searchSection: {
+    paddingRight: 3,
+  },
+
+  iconButton: {
+    backgroundColor: '#f8c040',
+    padding: 1,
+    borderRadius: '0 5px 5px 0',
+    '& span': {
+      color: '#000000',
+    },
+  },
+  reviewItem: {
+    marginRight: '1rem',
+    borderRight: '1px #808080 solid',
+    paddingRight: '1rem',
+  },
+
+  mapInputBox: {
+    position: 'absolute',
+    display: 'flex',
+    left: 0,
+    right: 0,
+    margin: '10px auto',
+    width: 250,
+    height: 40,
+    '& input': {
+      width: 250,
+    },
+  },
+
   navbar: {
     backgroundColor: '#27415a',
     '& a': {
@@ -15,10 +134,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   h4: {
-    fontSize: 20,
-    top: 50,
-    marginLeft: 20,
+    fontSize: 18,
+    marginLeft: 3,
     padding: '0 10',
+    paddingBottom: '4px',
   },
 
   h5: {
@@ -30,24 +149,24 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.73,
   },
 
-  grow: {
-    flexGrow: 1,
-  },
-  drop: {
-    boxShadow: '0 10px 20px #36342e66, 0 6px 6px #33362e66',
-  },
+  // grow: {
+  //   flexGrow: 1,
+  // },
+  // drop: {
+  //   boxShadow: '0 10px 20px #36342e66, 0 6px 6px #33362e66',
+  // },
 
-  main: {
-    minHeight: '80vh',
-  },
+  // main: {
+  //   minHeight: '80vh',
+  // },
 
-  footer: {
-    padding: '1rem',
-    // background: '#27415a',
-    marginTop: '3rem',
-    // marginBottom: '1rem',
-    textAlign: 'center',
-  },
+  // footer: {
+  //   padding: '1rem',
+  //   // background: '#27415a',
+  //   marginTop: '3rem',
+  //   // marginBottom: '1rem',
+  //   textAlign: 'center',
+  // },
 
   lower: {
     marginTop: -30,
@@ -65,6 +184,16 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     paddingTop: 60,
     paddingBottom: 30,
+    marginBottom: -6,
+    fontWeight: 500,
+    fontSize: '1rem',
+    opacity: 0.63,
+  },
+
+  lower3a: {
+    textAlign: 'center',
+    paddingTop: 10,
+    paddingBottom: 10,
     marginBottom: -6,
     fontWeight: 500,
     fontSize: '1rem',
@@ -99,6 +228,7 @@ const useStyles = makeStyles((theme) => ({
 
   login: {
     fontSize: '1.2rem',
+    // paddingRight: '.5rem',
   },
 
   justify: {
@@ -144,7 +274,15 @@ const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
     fontSize: 32,
     marginBottom: 1,
-    marginLeft: 10,
+    marginLeft: 1,
+    textTransform: 'initial',
+  },
+  navbarButton3: {
+    color: '#ffffff',
+    fontSize: 27,
+    // marginTop: 1,
+    marginLeft: 1,
+    marginRight: 1,
     textTransform: 'initial',
   },
   featuredImage: {
@@ -164,16 +302,14 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 800,
     width: '100%',
   },
-  reviewItem: {
-    marginRight: '1rem',
-    borderRight: '1px #808080 solid',
-    paddingRight: '1rem',
-  },
+
   toolbar: {
     justifyContent: 'space-between',
   },
   menuButton: { padding: 0 },
   mt1: { marginTop: '1.3rem' },
+
+  // search
 
   // Accordion
 
@@ -194,33 +330,6 @@ const useStyles = makeStyles((theme) => ({
     borderradius: 4,
   },
 
-  // search
-  searchSection: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
-  searchForm: {
-    border: '1px solid #ffffff',
-    backgroundColor: '#ffffff',
-    borderRadius: 5,
-  },
-  searchInput: {
-    paddingLeft: 8,
-    color: '#000000',
-    '& :: placeholder': {
-      color: '#606060',
-    },
-  },
-  iconButton: {
-    backgroundColor: '#f8c040',
-    padding: 5,
-    borderRadius: '0 5px 5px 0',
-    '& span': {
-      color: '#000000',
-    },
-  },
   button2: {
     display: 'block',
     maxWidth: '700',
@@ -242,18 +351,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 8,
   },
   fullContainer: { height: '100vh' },
-  mapInputBox: {
-    position: 'absolute',
-    display: 'flex',
-    left: 0,
-    right: 0,
-    margin: '10px auto',
-    width: 300,
-    height: 40,
-    '& input': {
-      width: 250,
-    },
-  },
-}))
+}
 
-export default useStyles
+export default classes

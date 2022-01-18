@@ -2,27 +2,26 @@ import * as React from 'react'
 import { Accordion } from '@mui/material'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
-import { Typography } from '@material-ui/core'
-import useStyles from '../utils/styles'
+import { Typography } from '@mui/material'
+import classes from '../utils/classes'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export default function SimpleAccordion() {
-  const classes = useStyles()
   return (
-    <div className={classes.justify2}>
+    <div sx={classes.justify2}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'
           id='panel1a-header'
         >
-          <Typography className={classes.lower5}>
+          <Typography sx={classes.lower5}>
             Some Information About Dixon / Deux Yeux Photographie
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h3 className={classes.justify}>
+            <h3 sx={classes.justify}>
               {' '}
               My Name is Martin Dixon and for over forty years I have been
               making images for corporate, editorial, and advertising clients.
@@ -97,13 +96,13 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className={classes.lower5}>
+          <Typography sx={classes.lower5}>
             Some Information About Digital Prints
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h3 className={classes.justify}>
+            <h3 sx={classes.justify}>
               Today&apos;s digital prints offer fantastic longevity if properly
               stored and displayed. The first rule for anyone displaying prints
               is to ensure the glass you use is to use UV-Filtered glass from a
@@ -154,13 +153,13 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className={classes.lower5}>
+          <Typography sx={classes.lower5}>
             Some Information About Shipping
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h3 className={classes.justify}>
+            <h3 sx={classes.justify}>
               I strictly use Fed-Ex and DHL carriers because I add some
               insurance for the prints against damage in transit. The images are
               gently rolled and placed inside a carton tube with end-caps. Then
@@ -179,13 +178,13 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className={classes.lower5}>
+          <Typography sx={classes.lower5}>
             Some Information About Print Sizes and Signed Editions
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h3 className={classes.justify}>
+            <h3 sx={classes.justify}>
               As a small, independent studio, I have limited the print sizes to
               &apos;12 x 19&apos; on &apos;13 x 19&apos; paper. Some larger
               landscape photographs have been printed on photographic canvas.
@@ -210,13 +209,13 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className={classes.lower5}>
+          <Typography sx={classes.lower5}>
             Some Information About My Clients
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <h3 className={classes.justify}>
+            <h3 sx={classes.justify}>
               I am proud of the many wonderful clients and Art Directors with
               whom I have worked throughout the years - some for nearly two
               decades before I found myself living abroad. A partial list

@@ -12,15 +12,9 @@ async function connect() {
       console.log('use previous connection')
       return
     }
-    // await mongoose.disconnect()
+     await mongoose.disconnect()
   }
-  const db = await mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    poolSize: 60,
-    // connectTimeoutMS: 50000,
-    // socketTimeoutMS: 50000,
-  })
+  const db = await mongoose.connect(process.env.MONGODB_URI, {})
 
   connection.isConnected = db.connections[0].readyState
 }
