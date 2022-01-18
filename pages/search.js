@@ -21,7 +21,7 @@ import axios from 'axios'
 import Rating from '@mui/material/Rating'
 import { Pagination } from '@mui/material'
 
-const PAGE_SIZE = 3
+const PAGE_SIZE = 9
 
 const prices = [
   {

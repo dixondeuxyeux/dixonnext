@@ -66,13 +66,13 @@ export async function getServerSideProps() {
     '-reviews'
   )
     .lean()
-    .limit(6)
+    .limit(9)
   const topRatedProductsDocs = await Product.find({}, '-reviews')
     .lean()
     .sort({
       rating: -1,
     })
-    .limit(6)
+    .limit(9)
   await db.disconnect()
   return {
     props: {
