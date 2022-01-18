@@ -41,7 +41,8 @@ export default function Home(props) {
               <Image
                 src={product.featuredImage}
                 alt={product.name}
-                layout='fill'
+                width={1500}
+                height={400}
               />
             </Link>
           </NextLink>
