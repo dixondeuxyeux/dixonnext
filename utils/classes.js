@@ -171,7 +171,6 @@ const classes = {
   lower: {
     marginTop: -30,
     paddingRight: 7,
-   
   },
 
   lower2: {
@@ -182,7 +181,7 @@ const classes = {
   },
   lower2a: {
     paddingTop: 1,
-    marginBottom: 12,
+    marginBottom: 6,
     paddingRight: 10,
     marginLeft: 10,
   },
