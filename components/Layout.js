@@ -106,9 +106,10 @@ export default function Layout({ title, description, children }) {
     e.preventDefault()
     router.push(`/search?query=${query}`)
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     fetchCategories()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const darkModeChangeHandler = () => {

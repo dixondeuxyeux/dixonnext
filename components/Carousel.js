@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-import classes from '../utils/classes'
+// import classes from '../utils/classes'
 
 export default function Carousel() {
   return (
