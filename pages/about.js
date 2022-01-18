@@ -111,6 +111,7 @@ export default function Layout({ title, description, children }) {
 
   useEffect(() => {
     fetchCategories()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const darkModeChangeHandler = () => {
