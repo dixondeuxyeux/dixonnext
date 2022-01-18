@@ -6,7 +6,7 @@ import Product from '../models/Product'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useContext } from 'react'
-// import Image from 'next/image'
+import Image from 'next/image'
 import { Store } from '../utils/Store'
 import ProductItem from '../components/ProductItem'
 import { Carousel } from 'react-responsive-carousel'
@@ -38,9 +38,7 @@ export default function Home(props) {
             passHref
           >
             <Link sx={classes.flex}>
-              <img src={product.featuredImage} alt={product.name} />
-                {/* {' '}
-              </img> */}
+              <Image src={product.featuredImage} alt={product.name} />
             </Link>
           </NextLink>
         ))}
