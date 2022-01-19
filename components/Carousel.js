@@ -28,7 +28,8 @@ class ImageGalleryComponent extends React.Component {
               alt='sunny'
             />
             <p sx={classes.lower2}>
-              It's Always Sunny In Africa, Dakar 2018 from the "Dakar Noir' Book
+              It&apos;s Always Sunny In Africa, Dakar 2018 from the &apos;Dakar
+              Noir&apos; Book
             </p>
           </div>
           <div>
@@ -40,8 +41,8 @@ class ImageGalleryComponent extends React.Component {
               alt='sunny'
             />
             <p sx={classes.lower2}>
-              Funeral for PM Meles Zenawi, Addis Ababa 2013 from the "Kingdom of
-              Original Man' book"
+              Funeral for PM Meles Zenawi, Addis Ababa 2013 from the
+              &apos;Kingdom of Original Man&apos; book
             </p>
           </div>
           <div>
@@ -53,8 +54,8 @@ class ImageGalleryComponent extends React.Component {
               alt='sunny'
             />
             <p sx={classes.lower2}>
-              Malala Vogue Cover, Gothenburg, Sweden 2021 from the "Small World'
-              book"
+              Malala Vogue Cover, Gothenburg, Sweden 2021 from the &apos;Small
+              World&apos; book
             </p>
           </div>
         </Carousel>
