@@ -11,11 +11,11 @@ class ImageGalleryComponent extends React.Component {
         <h2></h2>
         <Carousel
           autoPlay
-          interval='3000'
-          transitionTime='1500'
-          showIndicators={false}
-          infiniteLoop={true}
-          showThumbs='false'
+          interval='5000'
+          transitionTime='1000'
+          showIndicators={true}
+          // infiniteLoop={true}
+          showThumbs={false}
           // centerMode='true'
           showStatus={false}
         >
