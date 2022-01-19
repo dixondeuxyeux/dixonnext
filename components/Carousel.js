@@ -13,7 +13,7 @@ class ImageGalleryComponent extends React.Component {
           autoPlay
           interval='5000'
           transitionTime='1000'
-          showIndicators={true}
+          showIndicators={false}
           // infiniteLoop={true}
           showThumbs={false}
           // centerMode='true'
