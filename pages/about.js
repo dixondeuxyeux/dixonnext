@@ -224,7 +224,7 @@ export default function Layout({ title, description, children }) {
                   <InputBase
                     name='query'
                     sx={classes.searchInput}
-                    placeholder='Search Photographs'
+                    placeholder='Search'
                     onChange={queryChangeHandler}
                   />
                   <IconButton
@@ -323,13 +323,7 @@ export default function Layout({ title, description, children }) {
 
         <Carousel />
 
-        <Typography sx={classes.lower2}>
-          {''} <br />
-          <h5 sx={classes.lower2}>
-            It&apos;s Always Sunny in Africa, Dakar, 2018{' '}
-          </h5>
-          <br />
-          {''} <br />
+        <Typography sx={classes.lower2b}>
           <Grid container>
             <Grid item md={8} xs={12}>
               <Accordion />

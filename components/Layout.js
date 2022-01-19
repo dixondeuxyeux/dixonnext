@@ -222,7 +222,7 @@ export default function Layout({ title, description, children }) {
                   <InputBase
                     name='query'
                     sx={classes.searchInput}
-                    placeholder='Search Photographs'
+                    placeholder='Search'
                     onChange={queryChangeHandler}
                   />
                   <IconButton

@@ -81,7 +81,7 @@ const classes = {
     borderRadius: 1,
   },
   searchInput: {
-    paddingLeft: 3,
+    paddingLeft: 1,
     color: '#000000',
     '& :: placeholder': {
       color: '#606060',
@@ -89,7 +89,7 @@ const classes = {
   },
 
   searchSection: {
-    paddingRight: 3,
+    paddingRight: 1,
   },
 
   iconButton: {
@@ -135,7 +135,7 @@ const classes = {
 
   h4: {
     fontSize: 18,
-    marginLeft: 3,
+    marginLeft: 1,
     padding: '0 10',
     paddingBottom: '4px',
   },
@@ -181,6 +181,12 @@ const classes = {
   },
   lower2a: {
     paddingTop: 1,
+    marginBottom: 6,
+    paddingRight: 10,
+    marginLeft: 10,
+  },
+  lower2b: {
+    paddingTop: -1,
     marginBottom: 6,
     paddingRight: 10,
     marginLeft: 10,
@@ -288,7 +294,7 @@ const classes = {
     fontSize: 27,
     // marginTop: 1,
     marginLeft: 1,
-    marginRight: 1,
+    // marginRight: 1,
     textTransform: 'initial',
   },
   featuredImage: {
