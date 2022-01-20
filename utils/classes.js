@@ -160,8 +160,8 @@ const classes = {
   },
 
   lower2: {
-    paddingTop: 1,
-    marginBottom: -6,
+    marginTop: 5,
+    marginBottom: 10,
     paddingRight: 10,
     marginLeft: 10,
   },
@@ -240,7 +240,7 @@ const classes = {
     border: 'none',
   },
   justify2: {
-    marginLeft: '30px',
+    marginLeft: '20px',
     marginRight: '20px',
     marginBottom: '100px',
     fontSize: '1.2rem',

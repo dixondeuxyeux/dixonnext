@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import classes from '../utils/classes'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import classes from '../utils/classes'
 
 class ImageGalleryComponent extends React.Component {
   render() {
