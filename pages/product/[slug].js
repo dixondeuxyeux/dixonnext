@@ -91,10 +91,12 @@ export default function ProductScreen(props) {
 
   return (
     <Layout title={product.name}>
-      <Box sx={classes.section}>
+      <Box>
         <NextLink href='/' passHref>
-          <Link sx={classes.raise}>
-            <Typography>Back to Photographs</Typography>
+          <Link>
+            <Typography>
+              <p sx={classes.raise}>Back to Photographs</p>
+            </Typography>
           </Link>
         </NextLink>
       </Box>
