@@ -30,7 +30,7 @@ export default function Home(props) {
   }
   return (
     <Layout>
-      <Carousel   showStatus={false}>
+      <Carousel    showIndicators={false} showStatus={false}>
         {featuredProducts.map((product) => (
           <NextLink
             key={product._id}
