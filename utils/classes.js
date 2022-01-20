@@ -88,8 +88,12 @@ const classes = {
     },
   },
 
+  raise: {
+    marginTop: '-2',
+  },
+
   searchSection: {
-    paddingRight: 1,
+    paddingRight: -12,
   },
 
   iconButton: {
@@ -148,25 +152,6 @@ const classes = {
     fontSize: '1.1rem',
     opacity: 0.73,
   },
-
-  // grow: {
-  //   flexGrow: 1,
-  // },
-  // drop: {
-  //   boxShadow: '0 10px 20px #36342e66, 0 6px 6px #33362e66',
-  // },
-
-  // main: {
-  //   minHeight: '80vh',
-  // },
-
-  // footer: {
-  //   padding: '1rem',
-  //   // background: '#27415a',
-  //   marginTop: '3rem',
-  //   // marginBottom: '1rem',
-  //   textAlign: 'center',
-  // },
 
   lower: {
     marginTop: -30,
