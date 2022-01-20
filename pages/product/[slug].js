@@ -93,8 +93,8 @@ export default function ProductScreen(props) {
     <Layout title={product.name}>
       <Box sx={classes.section}>
         <NextLink href='/' passHref>
-          <Link>
-            <Typography sx={classes.raise}>Back to Photographs</Typography>
+          <Link sx={classes.raise}>
+            <Typography>Back to Photographs</Typography>
           </Link>
         </NextLink>
       </Box>

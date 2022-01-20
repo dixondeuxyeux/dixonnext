@@ -89,7 +89,7 @@ const classes = {
   },
 
   raise: {
-    marginTop: '-2',
+    paddingTop: '-20',
   },
 
   searchSection: {
