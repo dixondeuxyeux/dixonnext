@@ -80,6 +80,7 @@ const classes = {
     backgroundColor: '#ffffff',
     borderRadius: 1,
   },
+
   searchInput: {
     paddingLeft: 1,
     color: '#000000',

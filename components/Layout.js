@@ -137,7 +137,7 @@ export default function Layout({ title, description, children }) {
     router.push('/')
   }
 
-  const isDesktop = useMediaQuery('(min-width:600px)')
+  const isDesktop = useMediaQuery('(min-width:630px)')
   return (
     <>
       <Head>
