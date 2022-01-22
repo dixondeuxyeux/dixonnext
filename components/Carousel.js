@@ -8,7 +8,6 @@ class ImageGalleryComponent extends React.Component {
   render() {
     return (
       <div>
-        <h2></h2>
         <Carousel
           autoPlay
           interval='5000'
