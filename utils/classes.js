@@ -141,9 +141,10 @@ const classes = {
 
   h4: {
     fontSize: 18,
-    marginLeft: 1,
+    marginLeft: 2,
     padding: '0 10',
     paddingBottom: '4px',
+    color: '#2197e6',
   },
 
   h5: {

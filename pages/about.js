@@ -172,11 +172,11 @@ export default function Layout({ title, description, children }) {
                 </Link>
               </NextLink>
 
-              <NextLink href='/' passHref>
+              {/* <NextLink href='/' passHref>
                 <Link>
                   <Typography sx={classes.h4}>Main</Typography>
                 </Link>
-              </NextLink>
+              </NextLink> */}
             </Box>
             <Drawer
               anchor='left'
@@ -216,6 +216,11 @@ export default function Layout({ title, description, children }) {
                   </NextLink>
                 ))}
               </List>
+              <NextLink href='/' passHref>
+                <Link>
+                  <Typography sx={classes.h4}>Main Page</Typography>
+                </Link>
+              </NextLink>
             </Drawer>
 
             <Box sx={isDesktop ? classes.visible : classes.hidden}>
