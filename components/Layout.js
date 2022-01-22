@@ -57,8 +57,8 @@ export default function Layout({ title, description, children }) {
       h1: {
         fontSize: '1.6rem',
         fontWeight: 400,
-        marginBottom: '.5rem',
-        marginTop: '-1.5rem',
+        marginBottom: '1rem',
+        marginTop: '-2.5rem',
       },
       h2: {
         fontSize: '1.4rem',
