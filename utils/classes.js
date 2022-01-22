@@ -92,6 +92,7 @@ const classes = {
   raise: {
     marginTop: '-10',
     marginBottom: '-10',
+    color: '#2197e6',
   },
 
   searchSection: {
