@@ -251,11 +251,6 @@ const classes = {
     border: 'none',
   },
 
-  // section: {
-  //   marginTop: 10,
-  //   marginBottom: 10,
-  // },
-
   form: {
     width: '100%',
     maxWidth: 800,
