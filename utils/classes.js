@@ -251,10 +251,10 @@ const classes = {
     border: 'none',
   },
 
-  section: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
+  // section: {
+  //   marginTop: 10,
+  //   marginBottom: 10,
+  // },
 
   form: {
     width: '100%',
@@ -296,9 +296,9 @@ const classes = {
   error: {
     color: '#f04040',
   },
-  fullWidth: {
-    width: '100%',
-  },
+  // fullWidth: {
+  //   width: '100%',
+  // },
   reviewForm: {
     maxWidth: 800,
     width: '100%',
