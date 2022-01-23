@@ -218,8 +218,8 @@ function AdminProdcuts() {
                               >
                                 <Button
                                   size='small'
-                                  variant='contained'
-                                  color='secondary'
+                                  variant='outlined'
+                                  color='primary'
                                 >
                                   Edit
                                 </Button>
@@ -227,7 +227,7 @@ function AdminProdcuts() {
                               <Button
                                 onClick={() => deleteHandler(product._id)}
                                 size='small'
-                                variant='contained'
+                                variant='outlined'
                                 color='error'
                               >
                                 Delete
