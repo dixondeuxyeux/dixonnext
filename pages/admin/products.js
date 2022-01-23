@@ -219,7 +219,7 @@ function AdminProdcuts() {
                                 <Button
                                   size='small'
                                   variant='outlined'
-                                  color='primary'
+                                  color='secondary'
                                 >
                                   Edit
                                 </Button>
