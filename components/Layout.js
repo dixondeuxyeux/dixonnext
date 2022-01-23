@@ -60,6 +60,7 @@ export default function Layout({ title, description, children }) {
         marginBottom: '1rem',
         marginTop: '2.5rem',
       },
+   
       h2: {
         fontSize: '1.4rem',
         fontWeight: 400,
@@ -81,7 +82,7 @@ export default function Layout({ title, description, children }) {
       },
       jobu: {
         main: '#c930bc',
-      }
+      },
     },
   })
 

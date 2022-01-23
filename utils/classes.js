@@ -157,7 +157,12 @@ const classes = {
     fontSize: '1.1rem',
     opacity: 0.73,
   },
-
+  h7: {
+    fontSize: '1.6rem',
+    fontWeight: 400,
+    marginBottom: '1rem',
+    marginTop: '-2.5rem',
+  },
   lower: {
     marginTop: -30,
     paddingRight: 7,
