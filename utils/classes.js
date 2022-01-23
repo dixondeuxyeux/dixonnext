@@ -141,11 +141,12 @@ const classes = {
   },
 
   h4: {
-    fontSize: 18,
+    fontSize: 17,
     marginLeft: 2,
     padding: '0 10',
-    paddingBottom: '4px',
-    color: '#2197e6',
+    paddingBottom: '10px',
+    marginBottom: '10px',
+    color: '#7a9aaf',
   },
 
   h5: {
@@ -214,9 +215,9 @@ const classes = {
     alignContent: 'center',
     // backgroundColor: '#e7f1f8',
     // borderBottom: '.5px solid #12738E',
-    padding: '24px 3px 20px 2px',
-    marginLeft: '32px',
-    marginBottom: -1,
+    padding: '14px 3px 10px 2px',
+    marginLeft: '2px',
+    // marginBottom: 1,
     fontWeight: 500,
     color: '#4587b1',
     fontSize: '1.1rem',
@@ -233,10 +234,10 @@ const classes = {
   },
 
   justify: {
-    marginLeft: '20px',
-    marginRight: '20px',
-    marginBottom: '40px',
-    padding: '0px 0px 20px 10px',
+    marginLeft: '14px',
+    marginRight: '14px',
+    marginBottom: '30px',
+    padding: '0px 0px 20px 6px',
     alignItems: 'center',
     fontSize: '1.2rem',
     color: '#777',

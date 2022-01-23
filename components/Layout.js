@@ -220,6 +220,11 @@ export default function Layout({ title, description, children }) {
                   <Typography sx={classes.h4}>Contact Page</Typography>
                 </Link>
               </NextLink>
+              <NextLink href='http://www.dixondeuxyeux.com' passHref>
+                <Link>
+                  <Typography sx={classes.h4}>Website Page</Typography>
+                </Link>
+              </NextLink>
             </Drawer>
 
             <Box sx={isDesktop ? classes.visible : classes.hidden}>

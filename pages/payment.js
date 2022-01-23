@@ -65,11 +65,11 @@ export default function Payment() {
                   value='PayPal'
                   control={<Radio />}
                 ></FormControlLabel>
-                <FormControlLabel
+                {/* <FormControlLabel
                   label='Stripe'
                   value='Stripe'
                   control={<Radio />}
-                ></FormControlLabel>
+                ></FormControlLabel> */}
                 <FormControlLabel
                   label='Cash'
                   value='Cash'

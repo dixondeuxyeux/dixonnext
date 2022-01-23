@@ -43,19 +43,19 @@ export default function ContactForm() {
   return (
     <Container>
       <Typography
-        style={{ marginLeft: '8px', marginTop: '14px' }}
+        style={{ marginLeft: '8px', marginTop: '24.5px' }}
         variant='h6'
         color='textSecondary'
         component='h2'
         gutterBottom
       >
-        Please feel free to contact me with any questions you may have
+        Please feel free to contact me with any questions
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={sendEmail}>
         <TextField
           // onChange={(e) => setName(e.target.value)}
-          style={{ padding: '8px' }}
+          style={{ padding: '4px 10px' }}
           label='Name'
           name='name'
           variant='outlined'
