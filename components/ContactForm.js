@@ -43,7 +43,7 @@ export default function ContactForm() {
   return (
     <Container>
       <Typography
-        style={{ marginLeft: '8px', marginTop: '24.5px' }}
+        style={{ marginLeft: '8px', marginTop: '26px' }}
         variant='h6'
         color='textSecondary'
         component='h2'

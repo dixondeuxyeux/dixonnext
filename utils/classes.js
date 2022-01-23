@@ -234,10 +234,10 @@ const classes = {
   },
 
   justify: {
-    marginLeft: '14px',
-    marginRight: '14px',
-    marginBottom: '30px',
-    padding: '0px 0px 20px 6px',
+    marginLeft: '7px',
+    marginRight: '7px',
+    marginBottom: '20px',
+    padding: '0px 0px 10px 0px',
     alignItems: 'center',
     fontSize: '1.2rem',
     color: '#777',
