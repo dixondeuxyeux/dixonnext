@@ -21,7 +21,7 @@ class ImageGalleryComponent extends React.Component {
         >
           <div>
             <Image
-              src='/images/swimBanner2.jpg'
+              src='/images/swimBanner2A.jpg'
               // layout='responsive'
               width={1500}
               height={822}
@@ -34,7 +34,7 @@ class ImageGalleryComponent extends React.Component {
           </div>
           <div>
             <Image
-              src='/images/monkWalk.jpg'
+              src='/images/monkWalkA.jpg'
               // layout='responsive'
               width={1500}
               height={822}
@@ -47,7 +47,7 @@ class ImageGalleryComponent extends React.Component {
           </div>
           <div>
             <Image
-              src='/images/malala.jpg'
+              src='/images/malalaA.jpg'
               // layout='responsive'
               width={1500}
               height={822}
