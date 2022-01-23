@@ -70,10 +70,18 @@ export default function Layout({ title, description, children }) {
       mode: darkMode ? 'dark' : 'light',
       primary: {
         main: '#f0c000',
+        light: '#f0d04e',
       },
       secondary: {
         main: '#208080',
+        light: '#7bd8d8',
       },
+      tertiary: {
+        main: '#51b351',
+      },
+      jobu: {
+        main: '#c930bc',
+      }
     },
   })
 
