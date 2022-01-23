@@ -223,7 +223,7 @@ function AdminProdcuts() {
                                 >
                                   Edit
                                 </Button>
-                              </NextLink>
+                              </NextLink>{' '}
                               <Button
                                 onClick={() => deleteHandler(product._id)}
                                 size='small'
