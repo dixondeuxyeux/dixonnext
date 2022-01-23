@@ -171,8 +171,8 @@ function AdminProdcuts() {
                   <Grid align='right' item xs={6}>
                     <Button
                       onClick={createHandler}
-                      color='primary'
-                      variant='contained'
+                      color='tertiary'
+                      variant='outlined'
                     >
                       Create
                     </Button>
