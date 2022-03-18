@@ -351,7 +351,7 @@ function Order({ params }) {
                     </Grid>
                     <Grid item xs={6}>
                       <Typography align='right'>
-                        <strong>${totalPrice}</strong>
+                        <strong>${(totalPrice).toFixed(2)}</strong>
                       </Typography>
                     </Grid>
                   </Grid>
