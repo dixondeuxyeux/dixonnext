@@ -343,7 +343,7 @@ export default function Layout({ title, description, children }) {
           <Typography sx={classes.lower2a}>
             All rights reserved © 2022 Dixon / Deux Yeux Photographie
             <br />
-            The Dixon Print Shop offers exhibition quality digital prints for
+            The Dixon Archives Print Shop offers exhibition quality digital prints for
             collectors and art lovers alike.
             {''} <br />
             Please feel free to email me with any questions or ideas at{' '}
