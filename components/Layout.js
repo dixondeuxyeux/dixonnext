@@ -60,7 +60,7 @@ export default function Layout({ title, description, children }) {
         marginBottom: '1rem',
         marginTop: '2.5rem',
       },
-   
+
       h2: {
         fontSize: '1.4rem',
         fontWeight: 400,
@@ -341,7 +341,7 @@ export default function Layout({ title, description, children }) {
         </Container>
         <Box component='footer' sx={classes.footer}>
           <Typography sx={classes.lower2a}>
-            All rights reserved © 2022 Dixon / Deux Yeux Photographie
+            All rights reserved. © 2022 Dixon / Deux Yeux Photographie
             <br />
             The Dixon Print Shop offers exhibition quality digital prints for
             collectors and art lovers alike.
