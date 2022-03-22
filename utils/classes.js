@@ -172,13 +172,14 @@ const classes = {
     marginTop: 5,
     marginBottom: 10,
     paddingRight: 10,
-    marginLeft: 10,
+    paddingLeft: 10,
   },
   lower2a: {
+    textAlign: 'center',
     paddingTop: 1,
     marginBottom: 6,
-    paddingRight: 10,
-    marginLeft: 10,
+    paddingRight: 12,
+    marginLeft: 12,
   },
   lower2b: {
     paddingTop: -1,

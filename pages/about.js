@@ -337,9 +337,8 @@ export default function Layout({ title, description, children }) {
         </Typography>
         <footer>
           <br />
-          <Typography sx={classes.lower3a}>
+          <Typography sx={classes.footer}>
             All rights reserved © 2022 Dixon / Deux Yeux Photographie
-            <br />
             Martin Dixon - Founder / Principal Photographer
             {''} <br />
           </Typography>
