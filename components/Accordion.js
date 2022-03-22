@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   typographyStyle: {
     color: '#0f7f98',
     padding: '12px 20px',
+    marginBottom: '12px',
   },
 
   accordionStyle: {
