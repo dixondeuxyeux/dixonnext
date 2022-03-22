@@ -2,35 +2,21 @@ import * as React from 'react'
 import { Accordion } from '@mui/material'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
-import {makeStyles} from '@mui/styles'
+import { makeStyles } from '@mui/material/styles'
 import { Typography } from '@mui/material'
 import classes from '../utils/classes'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-const useStyles = makeStyles({
-  typographyStyle: {
-    color: '#0f7f98',
-    padding: '12px 20px',
-    marginBottom: '12px',
-  },
-
-  accordionStyle: {
-    marginLeft: '4px',
-    marginRigt: '4px',
-  }
-})
-
 export default function SimpleAccordion() {
-  const classes = useStyles()
   return (
-    <div >
-      <Accordion >
-        <AccordionSummary 
+    <div sx={classes.justify2}>
+      <Accordion>
+        <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'
           id='panel1a-header'
         >
-          <Typography className = {classes.typographyStyle}>
+          <Typography sx={classes.lower5}>
             Some Information About Dixon / Deux Yeux Photographie
           </Typography>
         </AccordionSummary>
@@ -111,7 +97,7 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className = {classes.typographyStyle}>
+          <Typography sx={classes.lower5}>
             Some Information About Digital Prints
           </Typography>
         </AccordionSummary>
@@ -168,7 +154,7 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className = {classes.typographyStyle}>
+          <Typography sx={classes.lower5}>
             Some Information About Shipping
           </Typography>
         </AccordionSummary>
@@ -193,7 +179,7 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className = {classes.typographyStyle}>
+          <Typography sx={classes.lower5}>
             Some Information About Print Sizes and Signed Editions
           </Typography>
         </AccordionSummary>
@@ -224,7 +210,7 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography className = {classes.typographyStyle}>
+          <Typography sx={classes.lower5}>
             Some Information About My Clients
           </Typography>
         </AccordionSummary>
