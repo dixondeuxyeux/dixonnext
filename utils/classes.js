@@ -168,11 +168,13 @@ const classes = {
   },
 
   lower2: {
+    
     marginTop: 5,
     marginBottom: 20,
     paddingRight: 10,
     paddingLeft: 10,
   },
+  
   lower2a: {
     textAlign: 'center',
     paddingTop: 1,

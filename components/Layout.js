@@ -66,6 +66,15 @@ export default function Layout({ title, description, children }) {
         fontWeight: 400,
         margin: '1rem 0',
       },
+      h3: {
+        fontSize: '1.2rem',
+        fontWeight: 400,
+        margin: '1rem 0',
+      },
+
+      p: {
+        fontSize: '1.3rem',
+      },
     },
     palette: {
       mode: darkMode ? 'dark' : 'light',
