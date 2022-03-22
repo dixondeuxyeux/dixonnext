@@ -97,7 +97,7 @@ export default function ContactForm() {
         />
         <Button
           onSubmit={sendEmail}
-          style={{ padding: '14px 12px', marginLeft: '8px', marginBottom: '50px' }}
+          style={{ padding: '14px 32px', marginLeft: '8px', marginTop: '12px', marginBottom: '50px' }}
           type='submit'
           color='secondary'
           variant='contained'

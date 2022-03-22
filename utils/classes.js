@@ -168,13 +168,12 @@ const classes = {
   },
 
   lower2: {
-    
     marginTop: 5,
     marginBottom: 20,
     paddingRight: 10,
     paddingLeft: 10,
   },
-  
+
   lower2a: {
     textAlign: 'center',
     paddingTop: 1,
@@ -233,7 +232,7 @@ const classes = {
     // borderBottom: '.5px solid #12738E',
     padding: '24px 6px 20px 6px',
     // marginBottom: '30px',
-   marginTop: '10px',
+    marginTop: '10px',
     fontWeight: 500,
     color: '#4587b1',
     fontSize: '1.4rem',
