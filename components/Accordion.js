@@ -2,14 +2,14 @@ import * as React from 'react'
 import { Accordion } from '@mui/material'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
-import { Typography } from '@mui/material'
+import { Typography} from '@mui/material'
 import classes from '../utils/classes'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export default function SimpleAccordion() {
   return (
-    <div sx={classes.justify2}>
-      <Accordion>
+    <div >
+      <Accordion >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'

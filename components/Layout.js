@@ -60,7 +60,7 @@ export default function Layout({ title, description, children }) {
         marginBottom: '1rem',
         marginTop: '2.5rem',
       },
-   
+
       h2: {
         fontSize: '1.4rem',
         fontWeight: 400,
@@ -343,13 +343,13 @@ export default function Layout({ title, description, children }) {
           <Typography sx={classes.lower3a}>
             All rights reserved © 2022 Dixon / Deux Yeux Photographie
             <br />
-            The Dixon Archives Print Shop offers exhibition quality digital prints for
-            collectors and art lovers alike.
+            The Dixon Archives Print Shop offers exhibition quality digital
+            prints for collectors and art lovers alike.
             {''} <br />
             Please feel free to email me with any questions or ideas at{' '}
-            <a href='mailto:www.dixondeuxyeux@gmail.com'>
+            <Link href='mailto:www.dixondeuxyeux@gmail.com' color='secondary'>
               dixondeuxyeux@gmail.com
-            </a>
+            </Link>
             {''} <br />
           </Typography>
         </Box>
