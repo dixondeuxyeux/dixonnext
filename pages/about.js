@@ -321,21 +321,22 @@ export default function Layout({ title, description, children }) {
           </Toolbar>
         </AppBar>
         <Container>{children} </Container>
-        {/* No go  */}
+       
 
         <Carousel />
 
-        
-        <Typography sx={classes.lower2b}>
-          <Grid container>
-            <Grid item xl={8} md={8} sm={12} xs={12}>
+        <Container >       
+        <Typography>
+          <Grid container spacing={3}>
+            <Grid item  md={8} sm={12} xs={12}>
               <Accordion />
             </Grid>
-            <Grid item  xl={4} md={4} sm={12} xs={12}>
+            <Grid item md={4} sm={12} xs={12}>
               <ContactForm />
             </Grid>
           </Grid>
         </Typography>
+         </Container>
         <footer>
           <br />
           <Typography sx={classes.footer}>

@@ -43,19 +43,19 @@ export default function ContactForm() {
   return (
     <Container>
       <Typography
-        style={{ marginLeft: '12px', marginTop: '18px' }}
+        style={{ marginLeft: '12px', marginTop: '38px' , fontSize: '1.3rem'}}
         variant='h6'
         color='textSecondary'
         component='h2'
         gutterBottom
       >
-        Please feel free to contact me with any questions
+        Please feel free to contact me.
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={sendEmail}>
         <TextField
           // onChange={(e) => setName(e.target.value)}
-          style={{ padding: '4px 10px' }}
+          style={{ padding: '14px 12px', margin: '4px' }}
           label='Name'
           name='name'
           variant='outlined'
@@ -65,7 +65,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setEmail(e.target.value)}
-          style={{ padding: '8px' }}
+          style={{ padding: '14px 12px', fontSize: '1.2rem' }}
           label='Email'
           name='email'
           variant='outlined'
@@ -75,7 +75,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setEmail(e.target.value)}
-          style={{ padding: '8px' }}
+          style={{ padding: '14px 12px', }}
           label='Subject'
           name='subject'
           variant='outlined'
@@ -85,7 +85,7 @@ export default function ContactForm() {
         />
         <TextField
           // onChange={(e) => setMessage(e.target.value)}
-          style={{ padding: '8px' }}
+          style={{ padding: '14px 12px' }}
           label='Message'
           name='message'
           variant='outlined'
@@ -97,7 +97,7 @@ export default function ContactForm() {
         />
         <Button
           onSubmit={sendEmail}
-          style={{ padding: '8px', marginLeft: '8px', marginBottom: '50px' }}
+          style={{ padding: '14px 12px', marginLeft: '8px', marginBottom: '50px' }}
           type='submit'
           color='secondary'
           variant='contained'
