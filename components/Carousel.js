@@ -14,7 +14,7 @@ class ImageGalleryComponent extends React.Component {
           interval='5000'
           transitionTime='1000'
           showIndicators={false}
-          // infiniteLoop={true}
+          infiniteLoop={true}
           showThumbs={false}
           // centerMode='true'
           showStatus={false}
