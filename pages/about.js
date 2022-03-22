@@ -47,14 +47,6 @@ export default function Layout({ title, description, children }) {
   const { darkMode, cart, userInfo } = state
 
   const theme = createTheme({
-    components: {
-      MuiLink: {
-        defaultProps: {
-          underline: 'hover',
-        },
-      },
-    },
-
     typography: {
       h1: {
         fontSize: '1.6rem',

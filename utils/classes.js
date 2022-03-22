@@ -73,8 +73,8 @@ const classes = {
     padding: 0,
   },
 
+ 
   // Search
-
   searchForm: {
     border: '1px solid #ffffff',
     backgroundColor: '#ffffff',
@@ -217,16 +217,17 @@ const classes = {
 
   lower5: {
     display: 'flex',
-    alignContent: 'center',
-    // backgroundColor: '#e7f1f8',
+    alignContent: 'left',
+    // backgroundColor: '#ddbebb',
     // borderBottom: '.5px solid #12738E',
-    padding: '14px 3px 10px 2px',
-    marginLeft: '2px',
+    padding: '14px 6px 20px 6px',
+    // marginBottom: '30px',
     // marginBottom: 1,
     fontWeight: 500,
     color: '#4587b1',
     fontSize: '1.1rem',
     opacity: 0.83,
+
   },
 
   background: {
@@ -249,8 +250,8 @@ const classes = {
     border: 'none',
   },
   justify2: {
-    marginLeft: '20px',
-    marginRight: '20px',
+    marginLeft: '2px',
+    marginRight: '2px',
     marginBottom: '100px',
     fontSize: '1.2rem',
     color: '#777',
@@ -353,6 +354,13 @@ const classes = {
     marginRight: 8,
   },
   fullContainer: { height: '100vh' },
+
+   // accordion
+
+   root: {
+    marginBottom: '20px'
+  },
+
 }
 
 export default classes
