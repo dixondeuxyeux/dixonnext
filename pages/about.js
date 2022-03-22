@@ -327,10 +327,10 @@ export default function Layout({ title, description, children }) {
 
         <Typography sx={classes.lower2b}>
           <Grid container>
-            <Grid item md={8} xs={12}>
+            <Grid item md={8} sm={12} xs={12}>
               <Accordion />
             </Grid>
-            <Grid item md={4} xs={12}>
+            <Grid item  md={4} sm={12} xs={12}>
               <ContactForm />
             </Grid>
           </Grid>

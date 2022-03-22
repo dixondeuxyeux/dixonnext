@@ -183,8 +183,8 @@ const classes = {
   lower2b: {
     paddingTop: -1,
     marginBottom: 6,
-    paddingRight: 10,
-    marginLeft: 10,
+    paddingRight: 5,
+    marginLeft: 5,
   },
 
   lower3: {
