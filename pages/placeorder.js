@@ -41,7 +41,7 @@ function PlaceOrder() {
   )
   const shippingPrice = itemsPrice > 200 ? 0 : 15
   const taxPrice = round2(itemsPrice * 0.15)
-  const totalPrice = round2(itemsPrice + shippingPrice + taxPrice).toFixed(2)
+  const totalPrice = round2(itemsPrice + shippingPrice + taxPrice)
 
   useEffect(() => {
     if (!paymentMethod) {
