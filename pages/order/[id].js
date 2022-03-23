@@ -65,7 +65,6 @@ function reducer(state, action) {
 function Order({ params }) {
   const orderId = params.id
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer()
-
   const router = useRouter()
   const { state } = useContext(Store)
   const { userInfo } = state
@@ -351,7 +350,6 @@ function Order({ params }) {
                     </Grid>
                     <Grid item xs={6}>
                       <Typography align='right'>
-                       
                         <strong>${totalPrice}</strong>
                       </Typography>
                     </Grid>
