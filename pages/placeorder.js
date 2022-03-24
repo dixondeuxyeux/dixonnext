@@ -185,7 +185,7 @@ function PlaceOrder() {
                     <Typography>Items:</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography align='right'>${itemsPrice}</Typography>
+                    <Typography align='right'>${itemsPrice.toFixed(2)}</Typography>
                   </Grid>
                 </Grid>
               </ListItem>
@@ -195,7 +195,7 @@ function PlaceOrder() {
                     <Typography>Tax:</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography align='right'>${taxPrice}</Typography>
+                    <Typography align='right'>${taxPrice.toFixed(2)}</Typography>
                   </Grid>
                 </Grid>
               </ListItem>
@@ -205,7 +205,7 @@ function PlaceOrder() {
                     <Typography>Shipping:</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography align='right'>${shippingPrice}</Typography>
+                    <Typography align='right'>${shippingPrice.toFixed(2)}</Typography>
                   </Grid>
                 </Grid>
               </ListItem>
@@ -218,7 +218,7 @@ function PlaceOrder() {
                   </Grid>
                   <Grid item xs={6}>
                     <Typography align='right'>
-                      <strong>${totalPrice}</strong>
+                      <strong>${totalPrice.toFixed(2)}</strong>
                     </Typography>
                   </Grid>
                 </Grid>

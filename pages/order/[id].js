@@ -164,7 +164,10 @@ function Order({ params }) {
           }
         )
         dispatch({ type: 'PAY_SUCCESS', payload: data })
-        enqueueSnackbar('Order is paid', { variant: 'success' })
+        enqueueSnackbar('Your Order has been paid, Thank you.', {
+          variant: 'success',
+          setTimeout: '10000ms',
+        })
       } catch (err) {
         dispatch({ type: 'PAY_FAIL', payload: getError(err) })
         enqueueSnackbar(getError(err), { variant: 'error' })
@@ -317,7 +320,7 @@ function Order({ params }) {
                       <Typography>Items:</Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography align='right'>${itemsPrice}</Typography>
+                      <Typography align='right'>${itemsPrice.toFixed(2)}</Typography>
                     </Grid>
                   </Grid>
                 </ListItem>
@@ -327,7 +330,7 @@ function Order({ params }) {
                       <Typography>Tax:</Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography align='right'>${taxPrice}</Typography>
+                      <Typography align='right'>${taxPrice.toFixed(2)}</Typography>
                     </Grid>
                   </Grid>
                 </ListItem>
@@ -337,7 +340,7 @@ function Order({ params }) {
                       <Typography>Shipping:</Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography align='right'>${shippingPrice}</Typography>
+                      <Typography align='right'>${shippingPrice.toFixed(2)}</Typography>
                     </Grid>
                   </Grid>
                 </ListItem>
@@ -350,7 +353,7 @@ function Order({ params }) {
                     </Grid>
                     <Grid item xs={6}>
                       <Typography align='right'>
-                        <strong>${totalPrice}</strong>
+                        <strong>${totalPrice.toFixed(2)}</strong>
                       </Typography>
                     </Grid>
                   </Grid>
