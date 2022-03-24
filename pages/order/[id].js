@@ -166,7 +166,7 @@ function Order({ params }) {
         dispatch({ type: 'PAY_SUCCESS', payload: data })
         enqueueSnackbar('Your Order has been paid, Thank you.', {
           variant: 'success',
-          setTimeout: '10000ms',
+          persist: 'true',
         })
       } catch (err) {
         dispatch({ type: 'PAY_FAIL', payload: getError(err) })
