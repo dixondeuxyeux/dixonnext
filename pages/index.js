@@ -49,7 +49,7 @@ export default function Home(props) {
         ))}
       </Carousel>
 
-      <Typography sx={classes.h7}>Popular Photographs </Typography>
+      <Typography sx={classes.h7}>Latest Photographs </Typography>
       <Grid container spacing={3}>
         {topRatedProducts.map((product) => (
           <Grid item md={4} key={product.name}>
